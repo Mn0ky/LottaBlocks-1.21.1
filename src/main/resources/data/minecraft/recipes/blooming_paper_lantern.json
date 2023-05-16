@@ -1,23 +1,24 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    " # ",
-    "PTP",
-    " P "
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:peony"
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "#C#",
+        "#P#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:paper"
+        },
+        "C": {
+            "item": "minecraft:candle"
+        },
+        "P": {
+            "item": "minecraft:pink_petals"
+        }
     },
-    "P": {
-      "item": "minecraft:paper"
+    "result": {
+        "item": "lottablocks:blooming_paper_lantern",
+        "count": 4
     },
-    "T": {
-      "item": "minecraft:torch"
-    }
-  },
-  "result": {
-    "item": "lottablocks:blooming_paper_lantern",
-    "count": 1
-  }
+    "group": "blooming_paper_lantern"
 }

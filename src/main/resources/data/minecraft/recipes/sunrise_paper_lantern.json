@@ -1,23 +1,24 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    " # ",
-    "PTP",
-    " P "
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:sunflower"
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "#C#",
+        "#T#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:paper"
+        },
+        "C": {
+            "item": "minecraft:candle"
+        },
+        "T": {
+            "item": "minecraft:torchflower"
+        }
     },
-    "P": {
-      "item": "minecraft:paper"
+    "result": {
+        "item": "lottablocks:sunrise_paper_lantern",
+        "count": 4
     },
-    "T": {
-      "item": "minecraft:torch"
-    }
-  },
-  "result": {
-    "item": "lottablocks:sunrise_paper_lantern",
-    "count": 1
-  }
+    "group": "sunrise_paper_lantern"
 }

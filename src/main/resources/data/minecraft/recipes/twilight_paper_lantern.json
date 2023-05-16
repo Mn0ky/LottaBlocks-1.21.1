@@ -1,23 +1,24 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    " # ",
-    "PTP",
-    " P "
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:blue_orchid"
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "#C#",
+        "#P#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:paper"
+        },
+        "C": {
+            "item": "minecraft:candle"
+        },
+        "P": {
+            "item": "minecraft:pitcher_plant"
+        }
     },
-    "P": {
-      "item": "minecraft:paper"
+    "result": {
+        "item": "lottablock:twilight_paper_lantern",
+        "count": 4
     },
-    "T": {
-      "item": "minecraft:torch"
-    }
-  },
-  "result": {
-    "item": "lottablocks:twilight_paper_lantern",
-    "count": 1
-  }
+    "group": "twilight_paper_lantern"
 }
