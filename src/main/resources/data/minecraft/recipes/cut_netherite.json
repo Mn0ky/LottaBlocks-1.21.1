@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:netherite_scrap"
+    },
+    {
+      "item": "lottablocks:cut_gold"
+    },
+    {
+      "item": "minecraft:netherite_scrap"
+    },
+    {
+      "item": "lottablocks:cut_gold"
+    },
+    {
+      "item": "lottablocks:cut_gold"
+    },
+    {
+      "item": "minecraft:netherite_scrap"
+    },
+    {
+      "item": "lottablocks:cut_gold"
+    },
+    {
+      "item": "minecraft:netherite_scrap"
+    }
+  ],
+  "result": {
+    "item": "lottablocks:cut_netherite",
+    "count": 4
+  }
+}

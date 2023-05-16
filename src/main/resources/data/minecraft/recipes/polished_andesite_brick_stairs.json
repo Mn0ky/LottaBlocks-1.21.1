@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#  ",
+        "## ",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "lottablocks:polished_andesite_bricks"
+        }
+    },
+    "result": {
+        "item": "lottablocks:polished_andesite_brick_stairs",
+        "count": 4
+    },
+    "group": "polished_andesite_bricks"
+}

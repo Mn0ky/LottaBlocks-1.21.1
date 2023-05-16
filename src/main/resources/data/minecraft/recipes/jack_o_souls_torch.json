@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:carved_pumpkin"
+    },
+    {
+      "item": "minecraft:soul_torch"
+    }
+  ],
+  "result": {
+    "item": "lottablocks:jack_o_souls",
+    "count": 1
+  }
+}

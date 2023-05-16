@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:cobweb"
+    }
+  },
+  "result": {
+    "item": "lottablocks:wall_web",
+    "count": 32
+  }
+}

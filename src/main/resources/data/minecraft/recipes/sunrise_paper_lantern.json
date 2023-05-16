@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "PTP",
+    " P "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:sunflower"
+    },
+    "P": {
+      "item": "minecraft:paper"
+    },
+    "T": {
+      "item": "minecraft:torch"
+    }
+  },
+  "result": {
+    "item": "lottablocks:sunrise_paper_lantern",
+    "count": 1
+  }
+}

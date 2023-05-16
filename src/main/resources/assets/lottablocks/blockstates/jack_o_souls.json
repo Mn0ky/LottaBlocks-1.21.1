@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "lottablocks:block/jack_o_souls",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "lottablocks:block/jack_o_souls"
+    },
+    "facing=south": {
+      "model": "lottablocks:block/jack_o_souls",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "lottablocks:block/jack_o_souls",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#  ",
+        "## ",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "lottablocks:polished_granite_bricks"
+        }
+    },
+    "result": {
+        "item": "lottablocks:polished_granite_brick_stairs",
+        "count": 4
+    },
+    "group": "polished_granite_brick_stairs"
+}

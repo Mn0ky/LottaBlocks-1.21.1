@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "lottablocks:block/void_lantern_block"
+    }
+  }
+}

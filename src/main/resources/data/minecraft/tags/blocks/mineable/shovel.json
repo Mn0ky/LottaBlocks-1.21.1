@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "lottablocks:dirt_bricks",
+    "lottablocks:dirt_brick_slab",
+    "lottablocks:dirt_brick_stairs",
+    "lottablocks:dirt_brick_wall"
+    ]
+    }

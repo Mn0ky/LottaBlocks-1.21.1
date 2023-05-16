@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "# #",
+    " P ",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:water_bucket"
+    },
+    "P": {
+      "item": "minecraft:player_head"
+    }
+  },
+  "result": {
+    "item": "lottablocks:congealed_piss",
+    "count": 1
+  }
+}

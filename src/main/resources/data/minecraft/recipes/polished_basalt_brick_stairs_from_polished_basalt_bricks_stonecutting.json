@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "lottablocks:polished_basalt_bricks"
+  },
+  "result": "lottablocks:polished_basalt_brick_stairs",
+  "count": 1
+}

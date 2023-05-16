@@ -1,0 +1,154 @@
+{
+  "itemGroup.lottablocks.lottablocks": "Lotta Blocks",
+
+  "block.lottablocks.amethyst_bricks": "Amethyst Bricks",
+  "block.lottablocks.amethyst_brick_slab": "Amethyst Brick Slab",
+  "block.lottablocks.amethyst_brick_stairs": "Amethyst Brick Stairs",
+  "block.lottablocks.amethyst_brick_wall": "Amethyst Brick Wall",
+  "block.lottablocks.amethyst_pillar": "Amethyst Pillar",
+  "block.lottablocks.chiseled_amethyst": "Chiseled Amethyst",
+
+  "block.lottablocks.dirt_bricks": "Dirt Bricks",
+  "block.lottablocks.dirt_brick_slab": "Dirt Brick Slab",
+  "block.lottablocks.dirt_brick_stairs": "Dirt Brick Stairs",
+  "block.lottablocks.dirt_brick_wall": "Dirt Brick Wall",
+
+  "block.lottablocks.cobblestone_bricks": "Cobblestone Bricks",
+  "block.lottablocks.cobblestone_brick_slab": "Cobblestone Brick Slab",
+  "block.lottablocks.cobblestone_brick_stairs": "Cobblestone Brick Stairs",
+  "block.lottablocks.cobblestone_brick_wall": "Cobblestone Brick Wall",
+
+  "block.lottablocks.wall_moss": "Moss",
+  "block.lottablocks.wall_web": "Web",
+
+  "block.lottablocks.dripstone_bricks": "Dripstone Bricks",
+  "block.lottablocks.dripstone_brick_slab": "Dripstone Brick Slab",
+  "block.lottablocks.dripstone_brick_stairs": "Dripstone Brick Stairs",
+  "block.lottablocks.dripstone_brick_wall": "Dripstone Brick Wall",
+
+  "block.lottablocks.polished_basalt_bricks": "Polished Basalt Bricks",
+
+  "block.lottablocks.polished_basalt_brick_slab": "Polished Basalt Brick Slab",
+  "block.lottablocks.polished_basalt_brick_stairs": "Polished Basalt Brick Stairs",
+  "block.lottablocks.polished_basalt_brick_wall": "Polished Basalt Brick Wall",
+
+  "block.lottablocks.polished_basalt_tiles": "Polished Basalt Tiles",
+
+  "block.lottablocks.polished_basalt_tile_slab": "Polished Basalt Tile Slab",
+  "block.lottablocks.polished_basalt_tile_stairs": "Polished Basalt Tile Stairs",
+  "block.lottablocks.polished_basalt_tile_wall": "Polished Basalt Tile Wall",
+
+  "block.lottablocks.chiseled_polished_basalt": "Chiseled Polished Basalt",
+
+  "block.lottablocks.dripstone_shingles": "Dripstone Shingles",
+  "block.lottablocks.dripstone_shingle_slab": "Dripstone Shingle Slab",
+  "block.lottablocks.dripstone_shingle_stairs": "Dripstone Shingle Stairs",
+  "block.lottablocks.dripstone_shingle_wall": "Dripstone Shingle Wall",
+
+  "block.lottablocks.cast_iron_block": "Cast Iron Block",
+  "block.lottablocks.cut_cast_iron": "Cut Cast Iron",
+  "block.lottablocks.cut_cast_iron_slab": "Cut Cast Iron Slab",
+  "block.lottablocks.cut_cast_iron_stairs": "Cut Cast Iron Stairs",
+  "block.lottablocks.cast_iron_door": "Cast Iron Door",
+  "block.lottablocks.cast_iron_trapdoor": "Cast Iron Trapdoor",
+
+  "block.lottablocks.gold_pillar": "Gold Pillar",
+
+  "block.lottablocks.cut_gold": "Cut Gold",
+  "block.lottablocks.cut_gold_slab": "Cut Gold Slab",
+  "block.lottablocks.cut_gold_stairs": "Cut Gold Stairs",
+
+  "block.lottablocks.chiseled_gold_block": "Chiseled Gold Block",
+
+  "block.lottablocks.cut_netherite": "Cut Netherite",
+  "block.lottablocks.cut_netherite_slab": "Cut Netherite Slab",
+  "block.lottablocks.cut_netherite_stairs": "Cut Netherite Stairs",
+
+  "block.lottablocks.lantern_block": "Lantern Block",
+  "block.lottablocks.soul_lantern_block": "Soul Lantern Block",
+  "block.lottablocks.void_lantern_block": "Void Lantern Block",
+
+  "block.lottablocks.lava_lamp": "Lava Lamp",
+  "block.lottablocks.amethyst_floodlight": "Amethyst Floodlight",
+  "block.lottablocks.honeylamp": "Honeylamp",
+
+  "block.lottablocks.soul_glass": "Soul Glass",
+  "block.lottablocks.reinforced_glass": "Reinforced Glass",
+  "block.lottablocks.glow_glass": "Glow Glass",
+
+  "block.lottablocks.tuff_bricks": "Tuff Bricks",
+  "block.lottablocks.tuff_brick_slab": "Tuff Brick Slab",
+  "block.lottablocks.tuff_brick_stairs": "Tuff Brick Stairs",
+  "block.lottablocks.tuff_brick_wall": "Tuff Brick Wall",
+
+  "block.lottablocks.obsidian_bricks": "Obsidian Bricks",
+  "block.lottablocks.obsidian_brick_slab": "Obsidian Brick Slab",
+  "block.lottablocks.obsidian_brick_stairs": "Obsidian Brick Stairs",
+  "block.lottablocks.obsidian_brick_wall": "Obsidian Brick Wall",
+  "block.lottablocks.obsidian_pillar": "Obsidian Pillar",
+
+  "block.lottablocks.framed_oak_planks": "Framed Oak Planks",
+  "block.lottablocks.framed_birch_planks": "Framed Birch Planks",
+  "block.lottablocks.framed_spruce_planks": "Framed Spruce Planks",
+  "block.lottablocks.framed_acacia_planks": "Framed Acacia Planks",
+  "block.lottablocks.framed_dark_oak_planks": "Framed Dark Oak Planks",
+  "block.lottablocks.framed_mangrove_planks": "Framed Mangrove Planks",
+  "block.lottablocks.framed_crimson_planks": "Framed Crimson Planks",
+  "block.lottablocks.framed_warped_planks": "Framed Warped Planks",
+
+  "block.lottablocks.bamboo_thatch": "Bamboo Thatch",
+  "block.lottablocks.bamboo_thatch_stairs": "Bamboo Thatch Stairs",
+  "block.lottablocks.bamboo_thatch_slab": "Bamboo Thatch Slab",
+
+  "block.lottablocks.sunrise_paper_lantern": "Sunrise Paper Lantern",
+  "block.lottablocks.twilight_paper_lantern": "Twilight Paper Lantern",
+  "block.lottablocks.blooming_paper_lantern": "Blooming Paper Lantern",
+
+  "block.lottablocks.jack_o_souls": "Jack o' Souls",
+
+  "block.lottablocks.deepslate_pillar": "Deepslate Pillar",
+
+  "block.lottablocks.stone_pillar": "Stone Pillar",
+
+  "block.lottablocks.stone_tiles": "Stone Tiles",
+  "block.lottablocks.stone_tile_stairs": "Stone Tile Stairs",
+  "block.lottablocks.stone_tile_slab": "Stone Tile Slab",
+  "block.lottablocks.stone_tile_wall": "Stone Tile Wall",
+
+  "block.lottablocks.polished_blackstone_pillar": "Polished Blackstone Pillar",
+
+  "block.lottablocks.polished_blackstone_tiles": "Polished Blackstone Tiles",
+  "block.lottablocks.polished_blackstone_tile_stairs": "Polished Blackstone Tile Stairs",
+  "block.lottablocks.polished_blackstone_tile_slab": "Polished Blackstone Tile Slab",
+  "block.lottablocks.polished_blackstone_tile_wall": "Polished Blackstone Tile Wall",
+
+  "block.lottablocks.calcite_bricks": "Calcite Bricks",
+  "block.lottablocks.calcite_brick_slab": "Calcite Brick Slab",
+  "block.lottablocks.calcite_brick_stairs": "Calcite Brick Stairs",
+  "block.lottablocks.calcite_brick_wall": "Calcite Brick Wall",
+
+  "block.lottablocks.polished_andesite_bricks": "Polished Andesite Bricks",
+  "block.lottablocks.polished_andesite_brick_slab": "Polished Andesite Slab",
+  "block.lottablocks.polished_andesite_brick_stairs": "Polished Andesite Stairs",
+  "block.lottablocks.polished_andesite_brick_wall": "Polished Andesite Wall",
+
+  "block.lottablocks.polished_diorite_bricks": "Polished Diorite Bricks",
+  "block.lottablocks.polished_diorite_brick_slab": "Polished Diorite Brick Slab",
+  "block.lottablocks.polished_diorite_brick_stairs": "Polished Diorite Brick Stairs",
+  "block.lottablocks.polished_diorite_brick_wall": "Polished Diorite Brick Wall",
+
+  "block.lottablocks.polished_granite_bricks": "Polished Granite Bricks",
+  "block.lottablocks.polished_granite_brick_slab": "Polished Granite Brick Slab",
+  "block.lottablocks.polished_granite_brick_stairs": "Polished Granite Brick Stairs",
+  "block.lottablocks.polished_granite_brick_wall": "Polished Granite Brick Wall",
+
+  "block.lottablocks.congealed_piss": "Congealed Piss",
+
+  "block.lottablocks.blue_nether_bricks": "Blue Nether Bricks",
+  "block.lottablocks.blue_nether_brick_slab": "Blue Nether Brick Slab",
+  "block.lottablocks.blue_nether_brick_stairs": "Blue Nether Brick Stairs",
+  "block.lottablocks.blue_nether_brick_wall": "Blue Nether Brick Wall",
+
+  "block.lottablocks.chiseled_red_nether_bricks": "Chiseled Red Nether Bricks",
+  "block.lottablocks.chiseled_blue_nether_bricks": "Chiseled Blue Nether Bricks"
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "PTP",
+    " P "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:blue_orchid"
+    },
+    "P": {
+      "item": "minecraft:paper"
+    },
+    "T": {
+      "item": "minecraft:torch"
+    }
+  },
+  "result": {
+    "item": "lottablocks:twilight_paper_lantern",
+    "count": 1
+  }
+}

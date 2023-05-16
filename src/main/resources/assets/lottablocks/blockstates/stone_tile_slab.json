@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "lottablocks:block/stone_tile_slab"
+    },
+    "type=double": {
+      "model": "lottablocks:block/stone_tiles"
+    },
+    "type=top": {
+      "model": "lottablocks:block/stone_tile_slab_top"
+    }
+  }
+}

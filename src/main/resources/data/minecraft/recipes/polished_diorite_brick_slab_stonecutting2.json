@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "minecraft:polished_diorite"
+    },
+    "result": "lottablocks:polished_diorite_brick_slab",
+    "group": "polished_diorite_bricks",
+    "count": 2
+}

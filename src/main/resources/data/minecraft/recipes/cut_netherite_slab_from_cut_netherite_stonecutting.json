@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "lottablocks:cut_netherite"
+  },
+  "result": "lottablocks:cut_netherite_slab",
+  "count": 2
+}

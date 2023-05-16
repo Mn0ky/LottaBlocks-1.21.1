@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "minecraft:polished_granite"
+    },
+    "result": "lottablocks:polished_granite_brick_stairs",
+    "group": "polished_granite_brick_stairs_stonecutting",
+    "count": 1
+}

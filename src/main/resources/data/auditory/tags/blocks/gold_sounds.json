@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "lottablocks:cut_gold",
+    "lottablocks:chiseled_gold_block",
+    "lottablocks:gold_pillar",
+    "lottablocks:cut_gold_slab",
+    "lottablocks:cut_gold_stairs"
+  ]
+}

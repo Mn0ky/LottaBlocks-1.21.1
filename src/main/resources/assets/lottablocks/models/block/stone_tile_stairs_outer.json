@@ -1,0 +1,8 @@
+{
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "lottablocks:block/stone_tiles",
+    "top": "lottablocks:block/stone_tiles",
+    "side": "lottablocks:block/stone_tiles"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "lottablocks:block/template_paper_lantern",
+  "textures": {
+    "lantern": "lottablocks:block/twilight_paper_lantern"
+  }
+}

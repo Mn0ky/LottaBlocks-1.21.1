@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "lottablocks:block/polished_blackstone_pillar_top",
+    "side": "lottablocks:block/polished_blackstone_pillar"
+  }
+}

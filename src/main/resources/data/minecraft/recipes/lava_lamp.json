@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#g#",
+    "GLG",
+    "#g#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:polished_blackstone"
+    },
+    "g": {
+      "item": "minecraft:gold_ingot"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "L": {
+      "item": "minecraft:lava_bucket"
+    }
+  },
+  "result": {
+    "item": "lottablocks:lava_lamp",
+    "count": 1
+  }
+}

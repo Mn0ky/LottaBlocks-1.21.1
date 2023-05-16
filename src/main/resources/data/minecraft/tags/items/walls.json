@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "lottablocks:amethyst_brick_wall",
+    "lottablocks:dripstone_shingle_wall",
+    "lottablocks:tuff_brick_wall",
+    "lottablocks:obsidian_brick_wall",
+    "lottablocks:dripstone_brick_wall",
+    "lottablocks:calcite_brick_wall",
+    "lottablocks:polished_andesite_brick_wall",
+    "lottablocks:blue_nether_brick_wall",
+    "lottablocks:polished_diorite_brick_wall",
+    "lottablocks:polished_granite_brick_wall",
+    "lottablocks:dirt_brick_wall",
+    "lottablocks:cobblestone_brick_wall"
+  ]
+}

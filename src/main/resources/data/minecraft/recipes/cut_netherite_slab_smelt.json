@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "lottablocks:cut_netherite_slab"
+  },
+  "result": "minecraft:netherite_scrap",
+  "experience": 0,
+  "cookingtime": 350
+}

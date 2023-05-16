@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "lottablocks:polished_andesite_bricks"
+    },
+    "result": "lottablocks:polished_andesite_brick_stairs",
+    "group": "polished_andesite_bricks",
+    "count": 1
+}

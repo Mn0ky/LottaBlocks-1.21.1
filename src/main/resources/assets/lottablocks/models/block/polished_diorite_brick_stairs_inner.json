@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "lottablocks:block/polished_diorite_bricks",
+    "top": "lottablocks:block/polished_diorite_bricks",
+    "side": "lottablocks:block/polished_diorite_bricks"
+  }
+}
