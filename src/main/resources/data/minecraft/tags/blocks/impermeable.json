@@ -3,6 +3,7 @@
   "values": [
     "lottablocks:reinforced_glass",
     "lottablocks:soul_glass",
-    "lottablocks:glow_glass"
+    "lottablocks:glow_glass",
+    "minecraft:nether_portal"
   ]
 }
