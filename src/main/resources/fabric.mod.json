@@ -34,8 +34,12 @@
   "depends": {
     "fabricloader": ">=0.14.19",
     "fabric-api": "*",
-    "minecraft": "1.20-beta.1",
+    "minecraft": "1.20-beta.4",
     "java": ">=17"
+  },
+  "breaks": {
+    "optifine": "*",
+    "optifabric": "*"
   },
   "suggests": {
     "another-mod": "*"
