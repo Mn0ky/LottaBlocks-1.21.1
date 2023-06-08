@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "lottablocks:sunrise_paper_lantern",
+    "lottablocks:twilight_paper_lantern",
+    "lottablocks:blooming_paper_lantern"
+  ]
+}
