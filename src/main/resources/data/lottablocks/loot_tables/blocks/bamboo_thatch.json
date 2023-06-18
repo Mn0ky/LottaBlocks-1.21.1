@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "lottablocks:bamboo_thatch"
+          "name": "lottablocks:bamboo_weave"
         }
       ],
       "conditions": [

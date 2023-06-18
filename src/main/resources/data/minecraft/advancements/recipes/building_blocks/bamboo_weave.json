@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_bamboo_thatch": {
+    "has_bamboo": {
       "conditions": {
         "items": [
           {
             "items": [
-              "lottablocks:bamboo_thatch"
+              "minecraft:bamboo"
             ]
           }
         ]
@@ -15,20 +15,22 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:bamboo_thatch_slab"
+        "recipe": "lottablocks:bamboo_weave"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_bamboo_thatch",
+      "has_vinyl",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:bamboo_thatch_slab"
+      "lottablocks:bamboo_weave",
+      "lottablocks:bamboo_weave_stairs",
+      "lottablocks:bamboo_weave_slab"
     ]
   }
 }

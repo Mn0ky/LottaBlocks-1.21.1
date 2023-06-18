@@ -414,17 +414,17 @@ public class ModBlocks {
     .nonOpaque().mapColor(MapColor.NONE).sounds(SoundType.GLASS)
     .luminance(5).emissiveLighting((state, world, pos) -> true)));
 
-    public static final Block BAMBOO_THATCH = registerBlock("bamboo_thatch",
+    public static final Block BAMBOO_WEAVE = registerBlock("bamboo_weave",
     new Block(FabricBlockSettings.of().mapColor(MapColor.TERRACOTTA_YELLOW)
     .sounds(SoundType.SCAFFOLDING).strength(0.8f)));
 
-    public static final Block BAMBOO_THATCH_STAIRS = registerBlock("bamboo_thatch_stairs",
-    new ModStairsBlock(ModBlocks.BAMBOO_THATCH.defaultBlockState(),
-    FabricBlockSettings.copyOf(ModBlocks.BAMBOO_THATCH)
+    public static final Block BAMBOO_WEAVE_STAIRS = registerBlock("bamboo_weave_stairs",
+    new ModStairsBlock(ModBlocks.BAMBOO_WEAVE.defaultBlockState(),
+    FabricBlockSettings.copyOf(ModBlocks.BAMBOO_WEAVE)
     .mapColor(MapColor.TERRACOTTA_YELLOW).sounds(SoundType.SCAFFOLDING)));
 
-    public static final Block BAMBOO_THATCH_SLAB = registerBlock("bamboo_thatch_slab",
-    new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.BAMBOO_THATCH)
+    public static final Block BAMBOO_WEAVE_SLAB = registerBlock("bamboo_weave_slab",
+    new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.BAMBOO_WEAVE)
     .mapColor(MapColor.TERRACOTTA_YELLOW).sounds(SoundType.SCAFFOLDING)));
 
     public static final Block BLUE_NETHER_BRICKS = registerBlock("blue_nether_bricks",

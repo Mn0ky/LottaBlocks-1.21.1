@@ -1,9 +1,6 @@
 {
   "replace": false,
   "values": [
-    "lottablocks:bamboo_thatch",
-    "lottablocks:bamboo_thatch_slab",
-    "lottablocks:bamboo_thatch_stairs",
     "lottablocks:honeylamp",
     "lottablocks:sunrise_paper_lantern",
     "lottablocks:twilight_paper_lantern",

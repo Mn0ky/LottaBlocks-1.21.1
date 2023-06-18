@@ -51,9 +51,9 @@ public class LottaBlocks implements ModInitializer {
 
 		// Flammable Block Registry:
 
-		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.BAMBOO_THATCH, 60, 20);
-		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.BAMBOO_THATCH_SLAB, 60, 20);
-		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.BAMBOO_THATCH_STAIRS, 60, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.BAMBOO_WEAVE, 60, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.BAMBOO_WEAVE_STAIRS, 60, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.BAMBOO_WEAVE_SLAB, 60, 20);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.SUNRISE_PAPER_LANTERN, 60, 20);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.TWILIGHT_PAPER_LANTERN, 60, 20);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.BLOOMING_PAPER_LANTERN, 60, 20);

@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "lottablocks:block/bamboo_weave",
+    "top": "lottablocks:block/bamboo_weave",
+    "side": "lottablocks:block/bamboo_weave"
+  }
+}

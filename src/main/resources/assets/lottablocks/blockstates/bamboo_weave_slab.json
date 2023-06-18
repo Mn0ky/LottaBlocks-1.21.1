@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "lottablocks:block/bamboo_weave_slab"
+    },
+    "type=double": {
+      "model": "lottablocks:block/bamboo_weave"
+    },
+    "type=top": {
+      "model": "lottablocks:block/bamboo_weave_slab_top"
+    }
+  }
+}

@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "lottablocks:bamboo_thatch"
+      "item": "lottablocks:bamboo_weave"
     }
   },
   "result": {
-    "item": "lottablocks:bamboo_thatch_stairs",
+    "item": "lottablocks:bamboo_weave_stairs",
     "count": 4
   }
 }

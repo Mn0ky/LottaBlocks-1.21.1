@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "lottablocks:jack_o_souls"
+    "lottablocks:jack_o_souls",
+    "lottablocks:bamboo_weave",
+    "lottablocks:bamboo_weave_stairs",
+    "lottablocks:bamboo_weave_slab"
   ]
 }

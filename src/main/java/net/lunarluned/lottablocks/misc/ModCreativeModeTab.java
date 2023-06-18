@@ -21,7 +21,7 @@ public class ModCreativeModeTab {
         // Building Blocks
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register(entries -> {
             entries.addAfter(Blocks.AMETHYST_BLOCK, ModBlocks.AMETHYST_BRICKS, ModBlocks.AMETHYST_BRICK_STAIRS, ModBlocks.AMETHYST_BRICK_SLAB, ModBlocks.AMETHYST_BRICK_SLAB, ModBlocks.AMETHYST_BRICK_WALL, ModBlocks.CHISELED_AMETHYST, ModBlocks.AMETHYST_FLOODLIGHT, ModBlocks.AMETHYST_PILLAR);
-            entries.addAfter(Blocks.BAMBOO_BUTTON, ModBlocks.BAMBOO_THATCH, ModBlocks.BAMBOO_THATCH_STAIRS, ModBlocks.BAMBOO_THATCH_SLAB);
+            entries.addAfter(Blocks.BAMBOO_BUTTON, ModBlocks.BAMBOO_WEAVE, ModBlocks.BAMBOO_WEAVE_STAIRS, ModBlocks.BAMBOO_WEAVE_SLAB);
             entries.addAfter(Blocks.RED_NETHER_BRICK_WALL, ModBlocks.CHISELED_RED_NETHER_BRICKS, ModBlocks.BLUE_NETHER_BRICKS, ModBlocks.BLUE_NETHER_BRICK_STAIRS, ModBlocks.BLUE_NETHER_BRICK_SLAB, ModBlocks.BLUE_NETHER_BRICK_WALL, ModBlocks.CHISELED_BLUE_NETHER_BRICKS);
             entries.addAfter(Blocks.POLISHED_DIORITE_SLAB, Blocks.CALCITE, ModBlocks.CALCITE_BRICKS, ModBlocks.CALCITE_BRICK_STAIRS, ModBlocks.CALCITE_BRICK_SLAB, ModBlocks.CALCITE_BRICK_WALL);
             entries.addAfter(Blocks.POLISHED_ANDESITE_SLAB, Blocks.TUFF, ModBlocks.TUFF_BRICKS, ModBlocks.TUFF_BRICK_STAIRS, ModBlocks.TUFF_BRICK_SLAB, ModBlocks.TUFF_BRICK_WALL);
