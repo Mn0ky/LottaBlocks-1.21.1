@@ -7,7 +7,7 @@
     "lottablocks:tuff_brick_slab",
     "lottablocks:obsidian_brick_slab",
     "lottablocks:dripstone_brick_slab",
-    "lottablocks:bamboo_thatch_slab",
+    "lottablocks:bamboo_weave_slab",
     "lottablocks:calcite_brick_slab",
     "lottablocks:blue_nether_brick_slab",
     "lottablocks:cut_gold_slab",
@@ -15,6 +15,11 @@
     "lottablocks:polished_granite_brick_slab",
     "lottablocks:polished_diorite_brick_slab",
     "lottablocks:dirt_brick_slab",
-    "lottablocks:cobblestone_brick_slab"
+    "lottablocks:cobblestone_brick_slab",
+    "lottablocks:stone_tile_slab",
+    "lottablocks:polished_blackstone_tile_slab",
+    "lottablocks:polished_basalt_brick_slab",
+    "lottablocks:polished_basalt_tile_slab",
+    "lottablocks:cut_netherite_slab"
   ]
 }

@@ -12,8 +12,6 @@ import net.lunarluned.lottablocks.LottaBlocks;
 import net.lunarluned.lottablocks.block.custom_blocks.*;
 import net.lunarluned.lottablocks.sound.ModSoundEvents;
 
-import java.awt.*;
-
 @SuppressWarnings("ALL")
 public class ModBlocks {
 
@@ -415,17 +413,14 @@ public class ModBlocks {
     .luminance(5).emissiveLighting((state, world, pos) -> true)));
 
     public static final Block BAMBOO_WEAVE = registerBlock("bamboo_weave",
-    new Block(FabricBlockSettings.of().mapColor(MapColor.TERRACOTTA_YELLOW)
-    .sounds(SoundType.SCAFFOLDING).strength(0.8f)));
+    new Block(FabricBlockSettings.copyOf(Blocks.BAMBOO_MOSAIC).sounds(SoundType.BAMBOO_WOOD)));
 
     public static final Block BAMBOO_WEAVE_STAIRS = registerBlock("bamboo_weave_stairs",
     new ModStairsBlock(ModBlocks.BAMBOO_WEAVE.defaultBlockState(),
-    FabricBlockSettings.copyOf(ModBlocks.BAMBOO_WEAVE)
-    .mapColor(MapColor.TERRACOTTA_YELLOW).sounds(SoundType.SCAFFOLDING)));
+    FabricBlockSettings.copyOf(ModBlocks.BAMBOO_WEAVE).sounds(SoundType.BAMBOO_WOOD)));
 
     public static final Block BAMBOO_WEAVE_SLAB = registerBlock("bamboo_weave_slab",
-    new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.BAMBOO_WEAVE)
-    .mapColor(MapColor.TERRACOTTA_YELLOW).sounds(SoundType.SCAFFOLDING)));
+    new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.BAMBOO_WEAVE).sounds(SoundType.BAMBOO_WOOD)));
 
     public static final Block BLUE_NETHER_BRICKS = registerBlock("blue_nether_bricks",
     new Block(FabricBlockSettings.copyOf(Blocks.RED_NETHER_BRICKS)

@@ -147,8 +147,7 @@
       "lottablocks:block/lava_lamp/step2",
       "lottablocks:block/lava_lamp/step3",
       "lottablocks:block/lava_lamp/step4",
-      "lottablocks:block/lava_lamp/step5",
-      "lottablocks:block/lava_lamp/step6"
+      "lottablocks:block/lava_lamp/step5"
     ],
     "subtitle": "subtitles.block.generic.footsteps"
   },
@@ -158,8 +157,7 @@
       "lottablocks:block/lava_lamp/step2",
       "lottablocks:block/lava_lamp/step3",
       "lottablocks:block/lava_lamp/step4",
-      "lottablocks:block/lava_lamp/step5",
-      "lottablocks:block/lava_lamp/step6"
+      "lottablocks:block/lava_lamp/step5"
     ]
   },
   "block.paper_lantern.place": {

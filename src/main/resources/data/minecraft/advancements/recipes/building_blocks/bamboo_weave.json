@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_vinyl",
+      "has_bamboo",
       "has_the_recipe"
     ]
   ],
