@@ -3,6 +3,6 @@
   "ingredient": {
     "item": "minecraft:polished_blackstone"
   },
-  "result": "lottablocks:amethyst_bricks",
+  "result": "lottablocks:polished_blackstone_tiles",
   "count": 1
 }
