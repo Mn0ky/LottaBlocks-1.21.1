@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "lottablocks:packed_ice_bricks"
+    },
+    "result": "lottablocks:packed_ice_brick_stairs",
+    "count": 1
+}

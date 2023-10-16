@@ -87,6 +87,10 @@
     "lottablocks:blue_nether_brick_slab",
     "lottablocks:blue_nether_brick_wall",
     "lottablocks:chiseled_blue_nether_bricks",
-    "lottablocks:chiseled_red_nether_bricks"
+    "lottablocks:chiseled_red_nether_bricks",
+    "lottablocks:packed_ice_bricks",
+    "lottablocks:packed_ice_brick_stairs",
+    "lottablocks:packed_ice_brick_slab",
+    "lottablocks:packed_ice_brick_wall"
   ]
 }

@@ -94,6 +94,7 @@
   "block.lottablocks.jack_o_souls": "Jack o'Souls",
 
   "block.lottablocks.deepslate_pillar": "Deepslate Pillar",
+  "block.lottablocks.end_stone_pillar": "End Stone Pillar",
 
   "block.lottablocks.stone_tiles": "Stone Tiles",
   "block.lottablocks.stone_tile_stairs": "Stone Tile Stairs",
@@ -135,5 +136,11 @@
   "block.lottablocks.blue_nether_brick_wall": "Blue Nether Brick Wall",
 
   "block.lottablocks.chiseled_red_nether_bricks": "Chiseled Red Nether Bricks",
-  "block.lottablocks.chiseled_blue_nether_bricks": "Chiseled Blue Nether Bricks"
+  "block.lottablocks.chiseled_blue_nether_bricks": "Chiseled Blue Nether Bricks",
+
+  "block.lottablocks.packed_ice_bricks": "Packed Ice Bricks",
+  "block.lottablocks.packed_ice_brick_slab": "Packed Ice Brick Slab",
+  "block.lottablocks.packed_ice_brick_stairs": "Packed Ice Brick Stairs",
+  "block.lottablocks.packed_ice_brick_wall": "Packed Ice Brick Wall"
+
 }

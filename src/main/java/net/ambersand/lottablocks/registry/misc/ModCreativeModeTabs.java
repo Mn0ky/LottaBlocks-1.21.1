@@ -37,6 +37,8 @@ public class ModCreativeModeTabs {
 
             entries.addAfter(Blocks.CHISELED_DEEPSLATE, ModBlocks.DEEPSLATE_PILLAR);
 
+            entries.addAfter(Blocks.END_STONE_BRICKS, ModBlocks.END_STONE_PILLAR);
+
             entries.addAfter(Blocks.RED_NETHER_BRICK_WALL, ModBlocks.CHISELED_RED_NETHER_BRICKS, ModBlocks.BLUE_NETHER_BRICKS, ModBlocks.BLUE_NETHER_BRICK_STAIRS,
             ModBlocks.BLUE_NETHER_BRICK_SLAB, ModBlocks.BLUE_NETHER_BRICK_WALL, ModBlocks.CHISELED_BLUE_NETHER_BRICKS);
 

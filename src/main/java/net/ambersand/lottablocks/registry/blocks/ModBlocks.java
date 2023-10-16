@@ -146,6 +146,9 @@ public class ModBlocks {
 
     // endregion
 
+    public static final Block END_STONE_PILLAR = registerBlock("end_stone_pillar",
+            new RotatedPillarBlock(FabricBlockSettings.copyOf(Blocks.END_STONE_BRICKS)));
+
     // region Calcite Blocks
 
     public static final Block CALCITE_BRICKS = registerBlock("calcite_bricks",
@@ -417,6 +420,22 @@ public class ModBlocks {
     public static final Block WALL_WEB = registerBlock("wall_web",
         new WallWebBlock(FabricBlockSettings.create().mapColor(MapColor.NONE).sounds(SoundType.HANGING_ROOTS)
         .noCollision().nonOpaque().strength(0.1F).pistonBehavior(PushReaction.DESTROY)));
+
+    // endregion
+
+    // region Packed Ice Blocks
+
+    public static final Block PACKED_ICE_BRICKS = registerBlock("packed_ice_bricks",
+            new Block(FabricBlockSettings.copyOf(Blocks.PACKED_ICE).mapColor(MapColor.COLOR_LIGHT_BLUE)));
+
+    public static final Block PACKED_ICE_BRICK_STAIRS = registerBlock("packed_ice_brick_stairs",
+            new StairBlock(ModBlocks.PACKED_ICE_BRICKS.defaultBlockState(), FabricBlockSettings.copyOf(ModBlocks.PACKED_ICE_BRICKS)));
+
+    public static final Block PACKED_ICE_BRICK_SLAB = registerBlock("packed_ice_brick_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.PACKED_ICE_BRICKS)));
+
+    public static final Block PACKED_ICE_BRICK_WALL = registerBlock("packed_ice_brick_wall",
+            new WallBlock(FabricBlockSettings.copyOf(ModBlocks.PACKED_ICE_BRICKS)));
 
     // endregion
 

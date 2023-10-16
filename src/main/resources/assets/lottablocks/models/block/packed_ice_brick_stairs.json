@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "lottablocks:block/packed_ice_bricks",
+    "top": "lottablocks:block/packed_ice_bricks",
+    "side": "lottablocks:block/packed_ice_bricks"
+  }
+}
