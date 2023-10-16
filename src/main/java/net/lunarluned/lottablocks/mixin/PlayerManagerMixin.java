@@ -3,6 +3,7 @@ package net.lunarluned.lottablocks.mixin;
 import com.mojang.logging.LogUtils;
 import net.minecraft.network.Connection;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.network.CommonListenerCookie;
 import net.minecraft.server.players.PlayerList;
 import org.slf4j.Logger;
 import org.spongepowered.asm.mixin.Final;
@@ -24,7 +25,7 @@ public class PlayerManagerMixin {
     private static final Logger LOGGER = LogUtils.getLogger();
 
     @Inject(method = "placeNewPlayer", at = @At(value = "TAIL"))
-    public void onPlayerConnectMixin(Connection connection, ServerPlayer player, CallbackInfo info) {
-        LOGGER.info(player.getName().getString() + " has Lotta Blocks installed");
+    public void onPlayerConnectMixin(Connection connection, ServerPlayer serverPlayer, CommonListenerCookie commonListenerCookie, CallbackInfo ci) {
+        LOGGER.info(serverPlayer.getName().getString() + " has Lotta Blocks installed");
     }
 }

@@ -49,7 +49,7 @@ public class MossOverlayBlock extends MultifaceBlock implements BonemealableBloc
     }
 
     @Override
-    public boolean isValidBonemealTarget(LevelReader levelReader, @NotNull BlockPos blockPos, @NotNull BlockState blockState, boolean bl) {
+    public boolean isValidBonemealTarget(LevelReader levelReader, BlockPos blockPos, BlockState blockState) {
         return Direction.stream().anyMatch(direction -> this.spreader.canSpreadInAnyDirection(blockState, levelReader, blockPos, direction.getOpposite()));
     }
 
