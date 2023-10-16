@@ -26,8 +26,7 @@ import java.util.Objects;
 
 public class LottaBlocks implements ModInitializer {
 
-	public static final Logger LOGGER = LoggerFactory.getLogger("modid");
-
+	public static final Logger LOGGER = LoggerFactory.getLogger("Lotta Blocks");
 	public static final String MOD_ID = "lottablocks";
 
 	public static final ImmutableMap<Block, Block> GLOW_INK_SAC_APPLYING = ImmutableMap.<Block, Block>builder()
