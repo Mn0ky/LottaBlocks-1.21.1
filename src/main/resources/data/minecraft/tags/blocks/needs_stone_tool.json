@@ -4,10 +4,6 @@
     "lottablocks:cast_iron_block",
     "lottablocks:cut_cast_iron",
     "lottablocks:cut_cast_iron_stairs",
-    "lottablocks:cut_cast_iron_slab",
-    "lottablocks:packed_ice_bricks",
-    "lottablocks:packed_ice_brick_stairs",
-    "lottablocks:packed_ice_brick_slab",
-    "lottablocks:packed_ice_brick_wall"
+    "lottablocks:cut_cast_iron_slab"
   ]
 }
