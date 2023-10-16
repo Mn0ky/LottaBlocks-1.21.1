@@ -30,5 +30,6 @@
         }
       ]
     }
-  ]
+  ],
+  "random_sequence": "lottablocks:blocks/obsidian_brick_slab"
 }

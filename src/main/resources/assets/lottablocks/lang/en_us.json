@@ -50,12 +50,10 @@
   "block.lottablocks.cast_iron_door": "Cast Iron Door",
   "block.lottablocks.cast_iron_trapdoor": "Cast Iron Trapdoor",
 
-  "block.lottablocks.gold_pillar": "Gold Pillar",
-
   "block.lottablocks.cut_gold": "Cut Gold",
   "block.lottablocks.cut_gold_slab": "Cut Gold Slab",
   "block.lottablocks.cut_gold_stairs": "Cut Gold Stairs",
-
+  "block.lottablocks.gold_pillar": "Gold Pillar",
   "block.lottablocks.chiseled_gold_block": "Chiseled Gold Block",
 
   "block.lottablocks.cut_netherite": "Cut Netherite",
@@ -85,15 +83,6 @@
   "block.lottablocks.obsidian_brick_wall": "Obsidian Brick Wall",
   "block.lottablocks.obsidian_pillar": "Obsidian Pillar",
 
-  "block.lottablocks.framed_oak_planks": "Framed Oak Planks",
-  "block.lottablocks.framed_birch_planks": "Framed Birch Planks",
-  "block.lottablocks.framed_spruce_planks": "Framed Spruce Planks",
-  "block.lottablocks.framed_acacia_planks": "Framed Acacia Planks",
-  "block.lottablocks.framed_dark_oak_planks": "Framed Dark Oak Planks",
-  "block.lottablocks.framed_mangrove_planks": "Framed Mangrove Planks",
-  "block.lottablocks.framed_crimson_planks": "Framed Crimson Planks",
-  "block.lottablocks.framed_warped_planks": "Framed Warped Planks",
-
   "block.lottablocks.bamboo_weave": "Bamboo Weave",
   "block.lottablocks.bamboo_weave_stairs": "Bamboo Weave Stairs",
   "block.lottablocks.bamboo_weave_slab": "Bamboo Weave Slab",
@@ -102,23 +91,21 @@
   "block.lottablocks.twilight_paper_lantern": "Twilight Paper Lantern",
   "block.lottablocks.blooming_paper_lantern": "Blooming Paper Lantern",
 
-  "block.lottablocks.jack_o_souls": "Jack o' Souls",
+  "block.lottablocks.jack_o_souls": "Jack o'Souls",
 
   "block.lottablocks.deepslate_pillar": "Deepslate Pillar",
-
-  "block.lottablocks.stone_pillar": "Stone Pillar",
 
   "block.lottablocks.stone_tiles": "Stone Tiles",
   "block.lottablocks.stone_tile_stairs": "Stone Tile Stairs",
   "block.lottablocks.stone_tile_slab": "Stone Tile Slab",
   "block.lottablocks.stone_tile_wall": "Stone Tile Wall",
-
-  "block.lottablocks.polished_blackstone_pillar": "Polished Blackstone Pillar",
+  "block.lottablocks.stone_pillar": "Stone Pillar",
 
   "block.lottablocks.polished_blackstone_tiles": "Polished Blackstone Tiles",
   "block.lottablocks.polished_blackstone_tile_stairs": "Polished Blackstone Tile Stairs",
   "block.lottablocks.polished_blackstone_tile_slab": "Polished Blackstone Tile Slab",
   "block.lottablocks.polished_blackstone_tile_wall": "Polished Blackstone Tile Wall",
+  "block.lottablocks.polished_blackstone_pillar": "Polished Blackstone Pillar",
 
   "block.lottablocks.calcite_bricks": "Calcite Bricks",
   "block.lottablocks.calcite_brick_slab": "Calcite Brick Slab",

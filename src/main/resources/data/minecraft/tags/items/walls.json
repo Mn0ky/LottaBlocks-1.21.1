@@ -2,20 +2,20 @@
   "replace": false,
   "values": [
     "lottablocks:amethyst_brick_wall",
+    "lottablocks:dripstone_brick_wall",
     "lottablocks:dripstone_shingle_wall",
     "lottablocks:dirt_brick_wall",
     "lottablocks:cobblestone_brick_wall",
-    "lottablocks:tuff_brick_wall",
-    "lottablocks:obsidian_brick_wall",
-    "lottablocks:dripstone_brick_wall",
+    "lottablocks:polished_blackstone_tile_wall",
+    "lottablocks:stone_tile_wall",
     "lottablocks:calcite_brick_wall",
-    "lottablocks:blue_nether_brick_wall",
     "lottablocks:polished_andesite_brick_wall",
     "lottablocks:polished_diorite_brick_wall",
     "lottablocks:polished_granite_brick_wall",
-    "lottablocks:stone_tile_wall",
-    "lottablocks:polished_blackstone_tile_wall",
     "lottablocks:polished_basalt_brick_wall",
-    "lottablocks:polished_basalt_tile_wall"
+    "lottablocks:polished_basalt_tile_wall",
+    "lottablocks:tuff_brick_wall",
+    "lottablocks:obsidian_brick_wall",
+    "lottablocks:blue_nether_brick_wall"
   ]
 }

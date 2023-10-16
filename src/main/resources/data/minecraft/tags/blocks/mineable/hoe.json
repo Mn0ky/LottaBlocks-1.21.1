@@ -2,9 +2,11 @@
   "replace": false,
   "values": [
     "lottablocks:honeylamp",
+    "lottablocks:congealed_piss",
     "lottablocks:sunrise_paper_lantern",
     "lottablocks:twilight_paper_lantern",
     "lottablocks:blooming_paper_lantern",
-    "lottablocks:congealed_piss"
+    "lottablocks:wall_moss",
+    "lottablocks:wall_web"
   ]
 }
