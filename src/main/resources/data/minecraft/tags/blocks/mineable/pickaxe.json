@@ -91,7 +91,6 @@
     "lottablocks:packed_ice_bricks",
     "lottablocks:packed_ice_brick_stairs",
     "lottablocks:packed_ice_brick_slab",
-    "lottablocks:packed_ice_brick_wall",
-    "lottablocks:end_stone_pillar"
+    "lottablocks:packed_ice_brick_wall"
   ]
 }

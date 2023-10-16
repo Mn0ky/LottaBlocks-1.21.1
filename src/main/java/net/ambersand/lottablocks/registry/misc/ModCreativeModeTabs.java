@@ -37,8 +37,6 @@ public class ModCreativeModeTabs {
 
             entries.addAfter(Blocks.CHISELED_DEEPSLATE, ModBlocks.DEEPSLATE_PILLAR);
 
-            entries.addAfter(Blocks.END_STONE_BRICKS, ModBlocks.END_STONE_PILLAR);
-
             entries.addAfter(Blocks.RED_NETHER_BRICK_WALL, ModBlocks.CHISELED_RED_NETHER_BRICKS, ModBlocks.BLUE_NETHER_BRICKS, ModBlocks.BLUE_NETHER_BRICK_STAIRS,
             ModBlocks.BLUE_NETHER_BRICK_SLAB, ModBlocks.BLUE_NETHER_BRICK_WALL, ModBlocks.CHISELED_BLUE_NETHER_BRICKS);
 
@@ -64,7 +62,7 @@ public class ModCreativeModeTabs {
             entries.addAfter(Blocks.AMETHYST_BLOCK, ModBlocks.CHISELED_AMETHYST, ModBlocks.AMETHYST_PILLAR, ModBlocks.AMETHYST_BRICKS,
             ModBlocks.AMETHYST_BRICK_STAIRS, ModBlocks.AMETHYST_BRICK_SLAB, ModBlocks.AMETHYST_BRICK_WALL);
 
-            entries.addAfter(Blocks.DARK_PRISMARINE_SLAB, ModBlocks.PACKED_ICE_BRICKS, ModBlocks.PACKED_ICE_BRICK_STAIRS, ModBlocks.PACKED_ICE_BRICK_SLAB, ModBlocks.PACKED_ICE_BRICK_WALL);
+            entries.addAfter(Blocks.DARK_PRISMARINE_SLAB, Blocks.PACKED_ICE, Blocks.BLUE_ICE, ModBlocks.PACKED_ICE_BRICKS, ModBlocks.PACKED_ICE_BRICK_STAIRS, ModBlocks.PACKED_ICE_BRICK_SLAB, ModBlocks.PACKED_ICE_BRICK_WALL);
         });
 
         // endregion
