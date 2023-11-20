@@ -226,5 +226,55 @@
       "lottablocks:block/paper_lantern/step5",
       "lottablocks:block/paper_lantern/step6"
     ]
+  },
+
+  "block.luigite.place": {
+    "sounds": [
+      "lottablocks:block/luigite/place1",
+      "lottablocks:block/luigite/place2",
+      "lottablocks:block/luigite/place3",
+      "lottablocks:block/luigite/place4"
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.luigite.break": {
+    "sounds": [
+      "lottablocks:block/luigite/break1",
+      "lottablocks:block/luigite/break2",
+      "lottablocks:block/luigite/break3"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.luigite.hit": {
+    "sounds": [
+      "lottablocks:block/luigite/step1",
+      "lottablocks:block/luigite/step2",
+      "lottablocks:block/luigite/step3",
+      "lottablocks:block/luigite/step4"
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.luigite.step": {
+    "sounds": [
+      "lottablocks:block/luigite/step1",
+      "lottablocks:block/luigite/step2",
+      "lottablocks:block/luigite/step3",
+      "lottablocks:block/luigite/step4"
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
+  },
+  "block.luigite.fall": {
+    "sounds": [
+      "lottablocks:block/luigite/step1",
+      "lottablocks:block/luigite/step2",
+      "lottablocks:block/luigite/step3",
+      "lottablocks:block/luigite/step4"
+    ]
+  },
+  "block.luigite.scream": {
+    "sounds": [
+      "lottablocks:block/luigite/scream"
+    ],
+    "subtitle": "subtitles.block.luigite.scream"
   }
 }

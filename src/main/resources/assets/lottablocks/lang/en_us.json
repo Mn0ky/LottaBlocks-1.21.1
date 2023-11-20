@@ -143,7 +143,12 @@
   "block.lottablocks.packed_ice_brick_stairs": "Packed Ice Brick Stairs",
   "block.lottablocks.packed_ice_brick_wall": "Packed Ice Brick Wall",
 
+  "item.lottablocks.luigite_jumpscare": "Luigite Jumpscare",
   "block.lottablocks.luigite": "Luigite",
   "block.lottablocks.luigite_hd": "Luigite HD",
-  "block.lottablocks.luigite_4k": "Luigite 4K"
+  "block.lottablocks.luigite_4k": "Luigite 4K",
+
+  "subtitles.block.luigite.scream": "Luigite screams",
+
+  "gui.lottablocks.luigite_message": "You think Koopa worked alone?"
 }

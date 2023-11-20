@@ -1,6 +1,7 @@
 package net.ambersand.lottablocks.registry;
 
 import com.google.common.collect.ImmutableMap;
+import net.ambersand.lottablocks.registry.items.ModItems;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.ambersand.lottablocks.registry.blocks.ModBlocks;
@@ -33,6 +34,7 @@ public class LottaBlocksRegistry {
 
         // region Registry
 
+        ModItems.registerModItems();
         ModBlocks.registerModBlocks();
         ModSoundEvents.registerSounds();
         ModCreativeModeTabs.registerCreativeTabs();

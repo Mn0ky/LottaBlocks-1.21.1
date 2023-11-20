@@ -1,7 +1,10 @@
 {
   "variants": {
-    "": {
+    "scary=false": {
       "model": "lottablocks:block/luigite_hd"
+    },
+    "scary=true": {
+      "model": "lottablocks:block/luigite_exe"
     }
   }
 }

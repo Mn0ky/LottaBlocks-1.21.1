@@ -423,29 +423,29 @@ public class ModBlocks {
     // region Packed Ice Blocks
 
     public static final Block PACKED_ICE_BRICKS = registerBlock("packed_ice_bricks",
-            new Block(FabricBlockSettings.copyOf(Blocks.PACKED_ICE).mapColor(MapColor.COLOR_LIGHT_BLUE).requiresTool()));
+        new Block(FabricBlockSettings.copyOf(Blocks.PACKED_ICE).mapColor(MapColor.COLOR_LIGHT_BLUE).requiresTool()));
 
     public static final Block PACKED_ICE_BRICK_STAIRS = registerBlock("packed_ice_brick_stairs",
-            new StairBlock(ModBlocks.PACKED_ICE_BRICKS.defaultBlockState(), FabricBlockSettings.copyOf(ModBlocks.PACKED_ICE_BRICKS)));
+        new StairBlock(ModBlocks.PACKED_ICE_BRICKS.defaultBlockState(), FabricBlockSettings.copyOf(ModBlocks.PACKED_ICE_BRICKS)));
 
     public static final Block PACKED_ICE_BRICK_SLAB = registerBlock("packed_ice_brick_slab",
-            new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.PACKED_ICE_BRICKS)));
+        new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.PACKED_ICE_BRICKS)));
 
     public static final Block PACKED_ICE_BRICK_WALL = registerBlock("packed_ice_brick_wall",
-            new WallBlock(FabricBlockSettings.copyOf(ModBlocks.PACKED_ICE_BRICKS)));
+        new WallBlock(FabricBlockSettings.copyOf(ModBlocks.PACKED_ICE_BRICKS)));
 
     // endregion
 
-    //  region Luigite
+    // region Luigite
 
     public static final Block LUIGITE = registerBlock("luigite",
-            new Block(FabricBlockSettings.copyOf(Blocks.BEDROCK).mapColor(MapColor.COLOR_GREEN).requiresTool()));
+        new LuigiteBlock(FabricBlockSettings.copyOf(Blocks.BEDROCK).mapColor(MapColor.COLOR_GREEN).sound(ModSoundEvents.LUIGITE)));
 
     public static final Block LUIGITE_HD = registerBlock("luigite_hd",
-            new Block(FabricBlockSettings.copyOf(ModBlocks.LUIGITE).mapColor(MapColor.COLOR_GREEN).requiresTool()));
+        new LuigiteBlock(FabricBlockSettings.copyOf(ModBlocks.LUIGITE)));
 
     public static final Block LUIGITE_4K = registerBlock("luigite_4k",
-            new Block(FabricBlockSettings.copyOf(ModBlocks.LUIGITE).mapColor(MapColor.COLOR_GREEN).requiresTool()));
+        new LuigiteBlock(FabricBlockSettings.copyOf(ModBlocks.LUIGITE)));
 
     // endregion
 

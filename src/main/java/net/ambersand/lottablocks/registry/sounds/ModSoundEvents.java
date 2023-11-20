@@ -35,6 +35,13 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_PAPER_LANTERN_HIT = registerSoundEvent("block.paper_lantern.hit");
     public static final SoundEvent BLOCK_PAPER_LANTERN_FALL = registerSoundEvent("block.paper_lantern.fall");
 
+    public static final SoundEvent BLOCK_LUIGITE_BREAK = registerSoundEvent("block.luigite.break");
+    public static final SoundEvent BLOCK_LUIGITE_STEP = registerSoundEvent("block.luigite.step");
+    public static final SoundEvent BLOCK_LUIGITE_PLACE = registerSoundEvent("block.luigite.place");
+    public static final SoundEvent BLOCK_LUIGITE_HIT = registerSoundEvent("block.luigite.hit");
+    public static final SoundEvent BLOCK_LUIGITE_FALL = registerSoundEvent("block.luigite.fall");
+    public static final SoundEvent BLOCK_LUIGITE_SCREAM = registerSoundEvent("block.luigite.scream");
+
     // endregion
 
     // region Block Sound Groups
@@ -54,6 +61,10 @@ public class ModSoundEvents {
     public static final SoundType PAPER_LANTERN = new SoundType(1F, 1F,
         ModSoundEvents.BLOCK_PAPER_LANTERN_BREAK, ModSoundEvents.BLOCK_PAPER_LANTERN_STEP, ModSoundEvents.BLOCK_PAPER_LANTERN_PLACE,
         ModSoundEvents.BLOCK_PAPER_LANTERN_HIT, ModSoundEvents.BLOCK_PAPER_LANTERN_FALL);
+
+    public static final SoundType LUIGITE = new SoundType(1F, 1F,
+        ModSoundEvents.BLOCK_LUIGITE_BREAK, ModSoundEvents.BLOCK_LUIGITE_STEP, ModSoundEvents.BLOCK_LUIGITE_PLACE,
+        ModSoundEvents.BLOCK_LUIGITE_HIT, ModSoundEvents.BLOCK_LUIGITE_FALL);
 
     // endregion
 
