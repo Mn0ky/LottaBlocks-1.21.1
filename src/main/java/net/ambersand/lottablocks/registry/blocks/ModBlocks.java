@@ -436,6 +436,20 @@ public class ModBlocks {
 
     // endregion
 
+    //  region Luigite
+
+    public static final Block LUIGITE = registerBlock("luigite",
+            new Block(FabricBlockSettings.copyOf(Blocks.BEDROCK).mapColor(MapColor.COLOR_GREEN).requiresTool()));
+
+    public static final Block LUIGITE_HD = registerBlock("luigite_hd",
+            new Block(FabricBlockSettings.copyOf(ModBlocks.LUIGITE).mapColor(MapColor.COLOR_GREEN).requiresTool()));
+
+    public static final Block LUIGITE_4K = registerBlock("luigite_4k",
+            new Block(FabricBlockSettings.copyOf(ModBlocks.LUIGITE).mapColor(MapColor.COLOR_GREEN).requiresTool()));
+
+    // endregion
+
+
     // Registry
 
     private static Block registerBlock(String name, Block block) {

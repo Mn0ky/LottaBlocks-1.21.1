@@ -18,6 +18,6 @@ public class LottaBlocks implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		LottaBlocksRegistry.registerAll();
-		LOGGER.info("Thank you for downloading Lotta Blocks! :)");
+		LOGGER.info("He's coming.");
 	}
 }

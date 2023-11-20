@@ -63,6 +63,12 @@ public class ModCreativeModeTabs {
             ModBlocks.AMETHYST_BRICK_STAIRS, ModBlocks.AMETHYST_BRICK_SLAB, ModBlocks.AMETHYST_BRICK_WALL);
 
             entries.addAfter(Blocks.DARK_PRISMARINE_SLAB, Blocks.PACKED_ICE, Blocks.BLUE_ICE, ModBlocks.PACKED_ICE_BRICKS, ModBlocks.PACKED_ICE_BRICK_STAIRS, ModBlocks.PACKED_ICE_BRICK_SLAB, ModBlocks.PACKED_ICE_BRICK_WALL);
+
+            entries.addAfter(Blocks.BEDROCK, ModBlocks.LUIGITE) ;
+
+            entries.addAfter(ModBlocks.LUIGITE, ModBlocks.LUIGITE_HD) ;
+
+            entries.addAfter(ModBlocks.LUIGITE_HD, ModBlocks.LUIGITE_4K) ;
         });
 
         // endregion

@@ -141,6 +141,9 @@
   "block.lottablocks.packed_ice_bricks": "Packed Ice Bricks",
   "block.lottablocks.packed_ice_brick_slab": "Packed Ice Brick Slab",
   "block.lottablocks.packed_ice_brick_stairs": "Packed Ice Brick Stairs",
-  "block.lottablocks.packed_ice_brick_wall": "Packed Ice Brick Wall"
+  "block.lottablocks.packed_ice_brick_wall": "Packed Ice Brick Wall",
 
+  "block.lottablocks.luigite": "Luigite",
+  "block.lottablocks.luigite_hd": "Luigite HD",
+  "block.lottablocks.luigite_4k": "Luigite 4K"
 }
