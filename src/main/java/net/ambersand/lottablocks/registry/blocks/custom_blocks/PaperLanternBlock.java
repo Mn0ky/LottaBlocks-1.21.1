@@ -22,7 +22,7 @@ public class PaperLanternBlock extends Block {
     }
 
     @Override
-    public VoxelShape getShape(@NotNull BlockState state, @NotNull BlockGetter world, @NotNull BlockPos pos, @NotNull CollisionContext context) {
+    public @NotNull VoxelShape getShape(@NotNull BlockState blockState, @NotNull BlockGetter blockGetter, @NotNull BlockPos blockPos, @NotNull CollisionContext collisionContext) {
         return Shapes.or(Block.box(4.0, 0, 4.0, 12.0, 2.0, 12.0), Block.box(2.0, 2.0, 2.0, 14.0, 14.0, 14.0), Block.box(4.0, 14.0, 4.0, 12.0, 16.0, 12.0));
     }
 

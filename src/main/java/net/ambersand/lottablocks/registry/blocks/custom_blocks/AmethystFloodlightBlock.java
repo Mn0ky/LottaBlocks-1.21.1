@@ -48,15 +48,18 @@ public class AmethystFloodlightBlock extends Block implements SimpleWaterloggedB
     }
 
     @Override
-    public BlockState getStateForPlacement(BlockPlaceContext context) {
+    public BlockState getStateForPlacement(BlockPlaceContext blockPlaceContext) {
 
-        FluidState fluidState = context.getLevel().getFluidState(context.getClickedPos());
-        Direction[] lookingDirections = context.getNearestLookingDirections();
+        FluidState fluidState = blockPlaceContext.getLevel().getFluidState(blockPlaceContext.getClickedPos());
+        Direction[] lookingDirections = blockPlaceContext.getNearestLookingDirections();
 
         for (Direction direction : lookingDirections) {
+
             if (direction.getAxis() == Direction.Axis.Y) {
+
                 BlockState blockState = this.defaultBlockState().setValue(HANGING, direction == Direction.UP);
-                if (blockState.canSurvive(context.getLevel(), context.getClickedPos())) {
+
+                if (blockState.canSurvive(blockPlaceContext.getLevel(), blockPlaceContext.getClickedPos())) {
                     return blockState.setValue(WATERLOGGED, fluidState.getType() == Fluids.WATER);
                 }
             }
@@ -65,13 +68,13 @@ public class AmethystFloodlightBlock extends Block implements SimpleWaterloggedB
     }
 
     @SuppressWarnings("deprecation")
-    public boolean canSurvive(@NotNull BlockState state, @NotNull LevelReader levelReader, BlockPos blockPos) {
+    public boolean canSurvive(@NotNull BlockState blockState, @NotNull LevelReader levelReader, BlockPos blockPos) {
         Direction direction = attachedDirection().getOpposite();
         return Block.canSupportCenter(levelReader, blockPos.relative(direction), direction.getOpposite());
     }
 
     @SuppressWarnings("deprecation")
-    public FluidState getFluidState(BlockState blockState) {
+    public @NotNull FluidState getFluidState(BlockState blockState) {
         return blockState.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(blockState);
     }
 
@@ -84,16 +87,16 @@ public class AmethystFloodlightBlock extends Block implements SimpleWaterloggedB
     // region Hitbox
 
     @SuppressWarnings("deprecation")
-    public VoxelShape getShape(@NotNull BlockState state, @NotNull BlockGetter world, @NotNull BlockPos pos, @NotNull CollisionContext context) {
+    public @NotNull VoxelShape getShape(@NotNull BlockState blockState, @NotNull BlockGetter blockGetter, @NotNull BlockPos blockPos, @NotNull CollisionContext collisionContext) {
         return Block.box(2.0D, 6.0D, 2.0D, 14.0D, 9.0D, 14.0D);
     }
 
     @SuppressWarnings("deprecation")
-    public BlockState updateShape(BlockState state, @NotNull Direction direction, @NotNull BlockState neighborState, @NotNull LevelAccessor world, @NotNull BlockPos pos, @NotNull BlockPos neighborPos) {
-        if (state.getValue(WATERLOGGED)) {
-            world.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(world));
+    public @NotNull BlockState updateShape(BlockState blockState, @NotNull Direction direction, @NotNull BlockState neighborState, @NotNull LevelAccessor levelAccessor, @NotNull BlockPos blockPos, @NotNull BlockPos neighborPos) {
+        if (blockState.getValue(WATERLOGGED)) {
+            levelAccessor.scheduleTick(blockPos, Fluids.WATER, Fluids.WATER.getTickDelay(levelAccessor));
         }
-        return attachedDirection().getOpposite() == direction && !state.canSurvive(world, pos) ? Blocks.AIR.defaultBlockState() : super.updateShape(state, direction, neighborState, world, pos, neighborPos);
+        return attachedDirection().getOpposite() == direction && !blockState.canSurvive(levelAccessor, blockPos) ? Blocks.AIR.defaultBlockState() : super.updateShape(blockState, direction, neighborState, levelAccessor, blockPos, neighborPos);
     }
 
     @SuppressWarnings("deprecation")

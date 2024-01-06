@@ -1,6 +1,7 @@
 package net.ambersand.lottablocks.registry;
 
 import com.google.common.collect.ImmutableMap;
+import net.ambersand.lottablocks.LottaBlocks;
 import net.ambersand.lottablocks.registry.items.ModItems;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
@@ -129,6 +130,6 @@ public class LottaBlocksRegistry {
 
         // endregion
 
-        System.out.println("Registering Content for Lotta Blocks");
+        System.out.println("Registering Content for " + LottaBlocks.LOGGER.getName());
     }
 }

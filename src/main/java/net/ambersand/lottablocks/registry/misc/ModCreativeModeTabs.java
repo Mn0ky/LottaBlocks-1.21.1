@@ -64,11 +64,7 @@ public class ModCreativeModeTabs {
 
             entries.addAfter(Blocks.DARK_PRISMARINE_SLAB, Blocks.PACKED_ICE, Blocks.BLUE_ICE, ModBlocks.PACKED_ICE_BRICKS, ModBlocks.PACKED_ICE_BRICK_STAIRS, ModBlocks.PACKED_ICE_BRICK_SLAB, ModBlocks.PACKED_ICE_BRICK_WALL);
 
-            entries.addAfter(Blocks.BEDROCK, ModBlocks.LUIGITE) ;
-
-            entries.addAfter(ModBlocks.LUIGITE, ModBlocks.LUIGITE_HD) ;
-
-            entries.addAfter(ModBlocks.LUIGITE_HD, ModBlocks.LUIGITE_4K) ;
+            entries.addAfter(Blocks.BEDROCK, ModBlocks.LUIGITE, ModBlocks.LUIGITE_HD, ModBlocks.LUIGITE_4K);
         });
 
         // endregion
@@ -94,7 +90,6 @@ public class ModCreativeModeTabs {
         // region Functional Blocks Tab
 
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(entries -> {
-
             entries.addAfter(Blocks.SOUL_LANTERN, ModBlocks.LANTERN_BLOCK, ModBlocks.SOUL_LANTERN_BLOCK, ModBlocks.AMETHYST_FLOODLIGHT);
             entries.addAfter(Blocks.REDSTONE_LAMP, ModBlocks.LAVA_LAMP);
             entries.addAfter(Blocks.SHROOMLIGHT, ModBlocks.HONEYLAMP);

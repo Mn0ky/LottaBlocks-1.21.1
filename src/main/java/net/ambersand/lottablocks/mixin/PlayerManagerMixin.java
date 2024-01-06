@@ -16,7 +16,7 @@ public class PlayerManagerMixin {
     // Puts a message in the server console to let the user know if a player has the mod installed
 
     @Inject(method = "placeNewPlayer", at = @At(value = "TAIL"))
-    private void lottaBlocks$onPlayerConnectToServer(Connection connection, ServerPlayer serverPlayer, CommonListenerCookie commonListenerCookie, CallbackInfo ci) {
-        LottaBlocks.LOGGER.info(serverPlayer.getName().getString() + " has Lotta Blocks installed");
+    private void lottaBlocks$onPlayerConnectToServer(Connection connection, ServerPlayer serverPlayer, CommonListenerCookie commonListenerCookie, CallbackInfo info) {
+        LottaBlocks.LOGGER.info(serverPlayer.getName().getString() + " has " + LottaBlocks.LOGGER.getName() + " installed");
     }
 }

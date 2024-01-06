@@ -4,22 +4,22 @@
   "version": "${version}",
 
   "name": "Lotta Blocks",
-  "description": "A small mod that adds several different building blocks for your build pallet!",
+  "description": "A small mod that adds various building blocks for your building palette!",
   "authors": [
     "AmbientUnder",
-    "LunarLuned",
     "Sydokiddo",
+    "LunarLuned",
     "ElBones (Additional Textures)"
   ],
   "contact": {
-    "homepage": "https://www.twitter.com/CosmaMods",
+    "issues": "https://github.com/LunarLuned/lotta_blocks/issues",
     "sources": "https://github.com/LunarLuned/lotta_blocks"
   },
-
   "license": "MIT",
   "icon": "assets/lottablocks/icon.png",
-
+  "accessWidener": "lottablocks.accesswidener",
   "environment": "*",
+
   "entrypoints": {
     "main": [
       "net.ambersand.lottablocks.LottaBlocks"
@@ -33,13 +33,13 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.14.21",
+    "fabricloader": ">=0.15.3",
     "fabric-api": "*",
-    "minecraft": ">=1.20.2",
+    "minecraft": ">=1.20.4",
     "java": ">=17"
   },
-  "breaks": {},
   "suggests": {
     "another-mod": "*"
-  }
+  },
+  "breaks": {}
 }

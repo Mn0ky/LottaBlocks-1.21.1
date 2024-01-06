@@ -6,6 +6,7 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.ambersand.lottablocks.LottaBlocks;
 import net.ambersand.lottablocks.registry.blocks.custom_blocks.*;
@@ -327,7 +328,7 @@ public class ModBlocks {
     // region Tuff Blocks
 
     public static final Block TUFF_BRICKS = registerBlock("tuff_bricks",
-        new Block(FabricBlockSettings.copyOf(Blocks.TUFF).sounds(ModSoundEvents.TUFF_BRICKS)));
+        new Block(FabricBlockSettings.copyOf(Blocks.TUFF).sounds(SoundType.TUFF_BRICKS)));
 
     public static final Block TUFF_BRICK_STAIRS = registerBlock("tuff_brick_stairs",
         new StairBlock(ModBlocks.TUFF_BRICKS.defaultBlockState(), FabricBlockSettings.copyOf(ModBlocks.TUFF_BRICKS)));
@@ -362,14 +363,14 @@ public class ModBlocks {
     // region Glass Blocks
 
     public static final Block REINFORCED_GLASS = registerBlock("reinforced_glass",
-        new GlassBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN)
-        .nonOpaque().mapColor(MapColor.COLOR_BLACK).requiresTool().sounds(SoundType.GLASS)));
+        new TransparentBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).nonOpaque().mapColor(MapColor.COLOR_BLACK)
+        .requiresTool().sounds(SoundType.GLASS).instrument(NoteBlockInstrument.HAT)));
 
     public static final Block SOUL_GLASS = registerBlock("soul_glass",
-        new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS_PANE).mapColor(MapColor.COLOR_BROWN)));
+        new TransparentBlock(FabricBlockSettings.copyOf(Blocks.GLASS).mapColor(MapColor.COLOR_BROWN)));
 
     public static final Block GLOW_GLASS = registerBlock("glow_glass",
-        new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS).luminance(5).emissiveLighting((state, world, pos) -> true)));
+        new TransparentBlock(FabricBlockSettings.copyOf(Blocks.GLASS).luminance(5).emissiveLighting((state, world, pos) -> true)));
 
     // endregion
 
@@ -423,7 +424,7 @@ public class ModBlocks {
     // region Packed Ice Blocks
 
     public static final Block PACKED_ICE_BRICKS = registerBlock("packed_ice_bricks",
-        new Block(FabricBlockSettings.copyOf(Blocks.PACKED_ICE).mapColor(MapColor.COLOR_LIGHT_BLUE).requiresTool()));
+        new Block(FabricBlockSettings.copyOf(Blocks.PACKED_ICE).requiresTool()));
 
     public static final Block PACKED_ICE_BRICK_STAIRS = registerBlock("packed_ice_brick_stairs",
         new StairBlock(ModBlocks.PACKED_ICE_BRICKS.defaultBlockState(), FabricBlockSettings.copyOf(ModBlocks.PACKED_ICE_BRICKS)));
@@ -448,7 +449,6 @@ public class ModBlocks {
         new LuigiteBlock(FabricBlockSettings.copyOf(ModBlocks.LUIGITE)));
 
     // endregion
-
 
     // Registry
 

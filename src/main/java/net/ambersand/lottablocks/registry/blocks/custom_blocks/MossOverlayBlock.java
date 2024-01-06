@@ -1,5 +1,6 @@
 package net.ambersand.lottablocks.registry.blocks.custom_blocks;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -31,6 +32,11 @@ public class MossOverlayBlock extends MultifaceBlock implements BonemealableBloc
     // region Initialization
 
     @Override
+    public @NotNull MapCodec<MossOverlayBlock> codec() {
+        return simpleCodec(MossOverlayBlock::new);
+    }
+
+    @Override
     protected void createBlockStateDefinition(StateDefinition.@NotNull Builder<Block, BlockState> builder) {
         super.createBlockStateDefinition(builder);
         builder.add(WATERLOGGED);
@@ -42,16 +48,16 @@ public class MossOverlayBlock extends MultifaceBlock implements BonemealableBloc
     }
 
     @Override
-    public BlockState updateShape(BlockState blockState, @NotNull Direction direction, @NotNull BlockState blockState2, @NotNull LevelAccessor levelAccessor, @NotNull BlockPos blockPos, @NotNull BlockPos blockPos2) {
+    public @NotNull BlockState updateShape(BlockState blockState, @NotNull Direction direction, @NotNull BlockState neighborState, @NotNull LevelAccessor levelAccessor, @NotNull BlockPos blockPos, @NotNull BlockPos neighborPos) {
         if (blockState.getValue(WATERLOGGED)) {
             levelAccessor.scheduleTick(blockPos, Fluids.WATER, Fluids.WATER.getTickDelay(levelAccessor));
         }
-        return super.updateShape(blockState, direction, blockState2, levelAccessor, blockPos, blockPos2);
+        return super.updateShape(blockState, direction, neighborState, levelAccessor, blockPos, neighborPos);
     }
 
     @SuppressWarnings("deprecation")
     @Override
-    public FluidState getFluidState(BlockState blockState) {
+    public @NotNull FluidState getFluidState(BlockState blockState) {
         if (blockState.getValue(WATERLOGGED)) {
             return Fluids.WATER.getSource(false);
         }
@@ -59,7 +65,7 @@ public class MossOverlayBlock extends MultifaceBlock implements BonemealableBloc
     }
 
     @Override
-    public MultifaceSpreader getSpreader() {
+    public @NotNull MultifaceSpreader getSpreader() {
         return this.spreader;
     }
 

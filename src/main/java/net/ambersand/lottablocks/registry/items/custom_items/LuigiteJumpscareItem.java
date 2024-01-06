@@ -20,7 +20,7 @@ public class LuigiteJumpscareItem extends Item {
     }
 
     @Override
-    public InteractionResultHolder<ItemStack> use(@NotNull Level level, @NotNull Player player, @NotNull InteractionHand interactionHand) {
+    public @NotNull InteractionResultHolder<ItemStack> use(@NotNull Level level, @NotNull Player player, @NotNull InteractionHand interactionHand) {
 
         ItemStack itemStack = player.getItemInHand(interactionHand);
         var minecraft = Minecraft.getInstance();

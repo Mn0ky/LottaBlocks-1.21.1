@@ -19,7 +19,7 @@ public class CongealedPissBlock extends Block {
 
     @SuppressWarnings("deprecation")
     @Override
-    public void entityInside(@NotNull BlockState state, @NotNull Level world, @NotNull BlockPos pos, @NotNull Entity entity) {
+    public void entityInside(@NotNull BlockState blockState, @NotNull Level level, @NotNull BlockPos blockPos, @NotNull Entity entity) {
 
         if (entity instanceof LivingEntity livingEntity) {
 
@@ -27,8 +27,8 @@ public class CongealedPissBlock extends Block {
             livingEntity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 800));
             livingEntity.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 100));
 
-            livingEntity.makeStuckInBlock(state, new Vec3(0.9D, 1.5D, 0.9D));
+            livingEntity.makeStuckInBlock(blockState, new Vec3(0.9D, 1.5D, 0.9D));
         }
-        super.entityInside(state, world, pos, entity);
+        super.entityInside(blockState, level, blockPos, entity);
     }
 }

@@ -17,12 +17,6 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_AMETHYST_BRICKS_HIT = registerSoundEvent("block.amethyst_bricks.hit");
     public static final SoundEvent BLOCK_AMETHYST_BRICKS_FALL = registerSoundEvent("block.amethyst_bricks.fall");
 
-    public static final SoundEvent BLOCK_TUFF_BRICKS_BREAK = registerSoundEvent("block.tuff_bricks.break");
-    public static final SoundEvent BLOCK_TUFF_BRICKS_STEP = registerSoundEvent("block.tuff_bricks.step");
-    public static final SoundEvent BLOCK_TUFF_BRICKS_PLACE = registerSoundEvent("block.tuff_bricks.place");
-    public static final SoundEvent BLOCK_TUFF_BRICKS_HIT = registerSoundEvent("block.tuff_bricks.hit");
-    public static final SoundEvent BLOCK_TUFF_BRICKS_FALL = registerSoundEvent("block.tuff_bricks.fall");
-
     public static final SoundEvent BLOCK_LAVA_LAMP_BREAK = registerSoundEvent("block.lava_lamp.break");
     public static final SoundEvent BLOCK_LAVA_LAMP_STEP = registerSoundEvent("block.lava_lamp.step");
     public static final SoundEvent BLOCK_LAVA_LAMP_PLACE = registerSoundEvent("block.lava_lamp.place");
@@ -49,10 +43,6 @@ public class ModSoundEvents {
     public static final SoundType AMETHYST_BRICKS = new SoundType(1F, 1F,
         ModSoundEvents.BLOCK_AMETHYST_BRICKS_BREAK, ModSoundEvents.BLOCK_AMETHYST_BRICKS_STEP, ModSoundEvents.BLOCK_AMETHYST_BRICKS_PLACE,
         ModSoundEvents.BLOCK_AMETHYST_BRICKS_HIT, ModSoundEvents.BLOCK_AMETHYST_BRICKS_FALL);
-
-    public static final SoundType TUFF_BRICKS = new SoundType(1F, 1F,
-        ModSoundEvents.BLOCK_TUFF_BRICKS_BREAK, ModSoundEvents.BLOCK_TUFF_BRICKS_STEP, ModSoundEvents.BLOCK_TUFF_BRICKS_PLACE,
-        ModSoundEvents.BLOCK_TUFF_BRICKS_HIT, ModSoundEvents.BLOCK_TUFF_BRICKS_FALL);
 
     public static final SoundType LAVA_LAMP = new SoundType(1F, 1F,
         ModSoundEvents.BLOCK_LAVA_LAMP_BREAK, ModSoundEvents.BLOCK_LAVA_LAMP_STEP, ModSoundEvents.BLOCK_LAVA_LAMP_PLACE,

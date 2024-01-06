@@ -74,59 +74,6 @@
     ]
   },
 
-  "block.tuff_bricks.place": {
-    "sounds": [
-      "lottablocks:block/tuff_bricks/break1",
-      "lottablocks:block/tuff_bricks/break2",
-      "lottablocks:block/tuff_bricks/break3",
-      "lottablocks:block/tuff_bricks/break4",
-      "lottablocks:block/tuff_bricks/break5"
-    ],
-    "subtitle": "subtitles.block.generic.place"
-  },
-  "block.tuff_bricks.break": {
-    "sounds": [
-      "lottablocks:block/tuff_bricks/break1",
-      "lottablocks:block/tuff_bricks/break2",
-      "lottablocks:block/tuff_bricks/break3",
-      "lottablocks:block/tuff_bricks/break4",
-      "lottablocks:block/tuff_bricks/break5"
-    ],
-    "subtitle": "subtitles.block.generic.break"
-  },
-  "block.tuff_bricks.hit": {
-    "sounds": [
-      "lottablocks:block/tuff_bricks/step1",
-      "lottablocks:block/tuff_bricks/step2",
-      "lottablocks:block/tuff_bricks/step3",
-      "lottablocks:block/tuff_bricks/step4",
-      "lottablocks:block/tuff_bricks/step5",
-      "lottablocks:block/tuff_bricks/step6"
-    ],
-    "subtitle": "subtitles.block.generic.hit"
-  },
-  "block.tuff_bricks.step": {
-    "sounds": [
-      "lottablocks:block/tuff_bricks/step1",
-      "lottablocks:block/tuff_bricks/step2",
-      "lottablocks:block/tuff_bricks/step3",
-      "lottablocks:block/tuff_bricks/step4",
-      "lottablocks:block/tuff_bricks/step5",
-      "lottablocks:block/tuff_bricks/step6"
-    ],
-    "subtitle": "subtitles.block.generic.footsteps"
-  },
-  "block.tuff_bricks.fall": {
-    "sounds": [
-      "lottablocks:block/tuff_bricks/step1",
-      "lottablocks:block/tuff_bricks/step2",
-      "lottablocks:block/tuff_bricks/step3",
-      "lottablocks:block/tuff_bricks/step4",
-      "lottablocks:block/tuff_bricks/step5",
-      "lottablocks:block/tuff_bricks/step6"
-    ]
-  },
-
   "block.lava_lamp.place": {
     "sounds": [
       "lottablocks:block/lava_lamp/place1",

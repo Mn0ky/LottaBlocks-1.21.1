@@ -43,7 +43,7 @@ public class LuigiteBlock extends Block {
 
     @SuppressWarnings("deprecation")
     @Override
-    public InteractionResult use(@NotNull BlockState blockState, @NotNull Level level, @NotNull BlockPos blockPos, @NotNull Player player, @NotNull InteractionHand interactionHand, @NotNull BlockHitResult blockHitResult) {
+    public @NotNull InteractionResult use(@NotNull BlockState blockState, @NotNull Level level, @NotNull BlockPos blockPos, @NotNull Player player, @NotNull InteractionHand interactionHand, @NotNull BlockHitResult blockHitResult) {
         if (!player.getItemInHand(interactionHand).is(ModTags.LUIGITE_BLOCKS)) {
             if (blockState.getValue(SCARY)) {
                 return InteractionResult.CONSUME;
