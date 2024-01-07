@@ -1,14 +1,66 @@
 package net.ambersand.lottablocks.registry.misc;
 
+import net.ambersand.lottablocks.LottaBlocks;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.ambersand.lottablocks.registry.blocks.ModBlocks;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Blocks;
 
 public class ModCreativeModeTabs {
 
+    private static final ResourceKey<CreativeModeTab> LOTTA_BLOCKS_CREATIVE_TAB = ResourceKey.create(Registries.CREATIVE_MODE_TAB, LottaBlocks.id(LottaBlocks.MOD_ID));
+
     @SuppressWarnings("all")
     public static void registerCreativeTabs() {
+
+        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, LOTTA_BLOCKS_CREATIVE_TAB, FabricItemGroup.builder()
+            .title(Component.translatable("itemGroup.lottablocks"))
+            .icon(() -> new ItemStack(ModBlocks.LANTERN_BLOCK))
+            .build()
+        );
+
+        // region Lotta Blocks Tab
+
+        ItemGroupEvents.modifyEntriesEvent(LOTTA_BLOCKS_CREATIVE_TAB).register(content -> {
+
+            content.accept(ModBlocks.BAMBOO_WEAVE);
+
+            content.addAfter(ModBlocks.BAMBOO_WEAVE, ModBlocks.BAMBOO_WEAVE_STAIRS, ModBlocks.BAMBOO_WEAVE_SLAB,
+            ModBlocks.DIRT_BRICKS, ModBlocks.DIRT_BRICK_STAIRS, ModBlocks.DIRT_BRICK_SLAB, ModBlocks.DIRT_BRICK_WALL,
+            ModBlocks.COBBLESTONE_BRICKS, ModBlocks.COBBLESTONE_BRICK_STAIRS, ModBlocks.COBBLESTONE_BRICK_SLAB, ModBlocks.COBBLESTONE_BRICK_WALL,
+            ModBlocks.STONE_PILLAR, ModBlocks.STONE_TILES, ModBlocks.STONE_TILE_STAIRS, ModBlocks.STONE_TILE_SLAB, ModBlocks.STONE_TILE_WALL,
+            ModBlocks.DRIPSTONE_BRICKS, ModBlocks.DRIPSTONE_BRICK_STAIRS, ModBlocks.DRIPSTONE_BRICK_SLAB, ModBlocks.DRIPSTONE_BRICK_WALL,
+            ModBlocks.DRIPSTONE_SHINGLES, ModBlocks.DRIPSTONE_SHINGLE_STAIRS, ModBlocks.DRIPSTONE_SHINGLE_SLAB, ModBlocks.DRIPSTONE_SHINGLE_WALL,
+            ModBlocks.POLISHED_GRANITE_BRICKS, ModBlocks.POLISHED_GRANITE_BRICK_STAIRS, ModBlocks.POLISHED_GRANITE_BRICK_SLAB, ModBlocks.POLISHED_GRANITE_BRICK_WALL,
+            ModBlocks.POLISHED_DIORITE_BRICKS, ModBlocks.POLISHED_DIORITE_BRICK_STAIRS, ModBlocks.POLISHED_DIORITE_BRICK_SLAB, ModBlocks.POLISHED_DIORITE_BRICK_WALL,
+            ModBlocks.POLISHED_ANDESITE_BRICKS, ModBlocks.POLISHED_ANDESITE_BRICK_STAIRS, ModBlocks.POLISHED_ANDESITE_BRICK_SLAB, ModBlocks.POLISHED_ANDESITE_BRICK_WALL,
+            ModBlocks.TUFF_BRICKS, ModBlocks.TUFF_BRICK_STAIRS, ModBlocks.TUFF_BRICK_SLAB, ModBlocks.TUFF_BRICK_WALL, ModBlocks.DEEPSLATE_PILLAR,
+            ModBlocks.PACKED_ICE_BRICKS, ModBlocks.PACKED_ICE_BRICK_STAIRS, ModBlocks.PACKED_ICE_BRICK_SLAB, ModBlocks.PACKED_ICE_BRICK_WALL,
+            ModBlocks.CHISELED_RED_NETHER_BRICKS, ModBlocks.CHISELED_BLUE_NETHER_BRICKS, ModBlocks.BLUE_NETHER_BRICKS, ModBlocks.BLUE_NETHER_BRICK_STAIRS, ModBlocks.BLUE_NETHER_BRICK_SLAB, ModBlocks.BLUE_NETHER_BRICK_WALL,
+            ModBlocks.CHISELED_POLISHED_BASALT, ModBlocks.POLISHED_BASALT_BRICKS, ModBlocks.POLISHED_BASALT_BRICK_STAIRS, ModBlocks.POLISHED_BASALT_BRICK_SLAB, ModBlocks.POLISHED_BASALT_BRICK_WALL,
+            ModBlocks.POLISHED_BASALT_TILES, ModBlocks.POLISHED_BASALT_TILE_SLAB, ModBlocks.POLISHED_BASALT_TILE_STAIRS, ModBlocks.POLISHED_BASALT_TILE_WALL,
+            ModBlocks.POLISHED_BLACKSTONE_PILLAR, ModBlocks.POLISHED_BLACKSTONE_TILES, ModBlocks.POLISHED_BLACKSTONE_TILE_STAIRS, ModBlocks.POLISHED_BLACKSTONE_TILE_SLAB, ModBlocks.POLISHED_BLACKSTONE_TILE_WALL,
+            ModBlocks.OBSIDIAN_PILLAR, ModBlocks.OBSIDIAN_BRICKS, ModBlocks.OBSIDIAN_BRICK_STAIRS, ModBlocks.OBSIDIAN_BRICK_SLAB, ModBlocks.OBSIDIAN_BRICK_WALL,
+            ModBlocks.CAST_IRON_BLOCK, ModBlocks.CUT_CAST_IRON, ModBlocks.CUT_CAST_IRON_STAIRS, ModBlocks.CUT_CAST_IRON_SLAB,
+            ModBlocks.CHISELED_GOLD_BLOCK, ModBlocks.GOLD_PILLAR, ModBlocks.CUT_GOLD, ModBlocks.CUT_GOLD_STAIRS, ModBlocks.CUT_GOLD_SLAB,
+            ModBlocks.CUT_NETHERITE, ModBlocks.CUT_NETHERITE_STAIRS, ModBlocks.CUT_NETHERITE_SLAB,
+            ModBlocks.CALCITE_BRICKS, ModBlocks.CALCITE_BRICK_STAIRS, ModBlocks.CALCITE_BRICK_SLAB, ModBlocks.CALCITE_BRICK_WALL,
+            ModBlocks.CHISELED_AMETHYST, ModBlocks.AMETHYST_PILLAR, ModBlocks.AMETHYST_BRICKS, ModBlocks.AMETHYST_BRICK_STAIRS, ModBlocks.AMETHYST_BRICK_SLAB, ModBlocks.AMETHYST_BRICK_WALL,
+            ModBlocks.GLOW_GLASS, ModBlocks.SOUL_GLASS, ModBlocks.REINFORCED_GLASS, ModBlocks.WALL_MOSS, ModBlocks.WALL_WEB, ModBlocks.JACK_O_SOULS,
+            ModBlocks.LANTERN_BLOCK, ModBlocks.SOUL_LANTERN_BLOCK, ModBlocks.AMETHYST_FLOODLIGHT, ModBlocks.LAVA_LAMP, ModBlocks.HONEYLAMP,
+            ModBlocks.BLOOMING_PAPER_LANTERN, ModBlocks.SUNRISE_PAPER_LANTERN, ModBlocks.TWILIGHT_PAPER_LANTERN
+            );
+        });
+
+        // endregion
 
         // region Building Blocks Tab
 
@@ -63,8 +115,6 @@ public class ModCreativeModeTabs {
             ModBlocks.AMETHYST_BRICK_STAIRS, ModBlocks.AMETHYST_BRICK_SLAB, ModBlocks.AMETHYST_BRICK_WALL);
 
             entries.addAfter(Blocks.DARK_PRISMARINE_SLAB, Blocks.PACKED_ICE, Blocks.BLUE_ICE, ModBlocks.PACKED_ICE_BRICKS, ModBlocks.PACKED_ICE_BRICK_STAIRS, ModBlocks.PACKED_ICE_BRICK_SLAB, ModBlocks.PACKED_ICE_BRICK_WALL);
-
-            entries.addAfter(Blocks.BEDROCK, ModBlocks.LUIGITE, ModBlocks.LUIGITE_HD, ModBlocks.LUIGITE_4K);
         });
 
         // endregion
