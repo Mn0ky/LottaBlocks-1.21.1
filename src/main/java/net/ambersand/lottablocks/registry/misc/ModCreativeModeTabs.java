@@ -122,7 +122,7 @@ public class ModCreativeModeTabs {
         // region Colored Blocks Tab
 
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COLORED_BLOCKS).register(entries -> {
-            entries.addAfter(Blocks.GLASS, ModBlocks.GLOW_GLASS, ModBlocks.SOUL_GLASS, ModBlocks.REINFORCED_GLASS);
+            entries.addBefore(Blocks.WHITE_STAINED_GLASS, ModBlocks.GLOW_GLASS, ModBlocks.SOUL_GLASS, ModBlocks.REINFORCED_GLASS);
             entries.addBefore(Blocks.WHITE_STAINED_GLASS_PANE, ModBlocks.GLOW_GLASS_PANE, ModBlocks.SOUL_GLASS_PANE, ModBlocks.REINFORCED_GLASS_PANE);
         });
 
