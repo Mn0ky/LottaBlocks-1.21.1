@@ -71,8 +71,11 @@
   "block.lottablocks.honeylamp": "Honeylamp",
 
   "block.lottablocks.soul_glass": "Soul Glass",
+  "block.lottablocks.soul_glass_pane": "Soul Glass Pane",
   "block.lottablocks.reinforced_glass": "Reinforced Glass",
+  "block.lottablocks.reinforced_glass_pane": "Reinforced Glass Pane",
   "block.lottablocks.glow_glass": "Glow Glass",
+  "block.lottablocks.glow_glass_pane": "Glow Glass Pane",
 
   "block.lottablocks.tuff_bricks": "Tuff Bricks",
   "block.lottablocks.tuff_brick_slab": "Tuff Brick Slab",

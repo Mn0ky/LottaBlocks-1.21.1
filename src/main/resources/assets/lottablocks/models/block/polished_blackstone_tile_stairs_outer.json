@@ -1,5 +1,5 @@
 {
-  "parent": "block/outer_stairs",
+  "parent": "minecraft:block/outer_stairs",
   "textures": {
     "bottom": "lottablocks:block/polished_blackstone_tiles",
     "top": "lottablocks:block/polished_blackstone_tiles",

@@ -5,7 +5,8 @@
     "wall_moss": "lottablocks:block/wall_moss"
   },
   "elements": [
-    {   "from": [ 0, 0, 0.1 ],
+    {
+      "from": [ 0, 0, 0.1 ],
       "to": [ 16, 16, 0.1 ],
       "faces": {
         "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#wall_moss" },

@@ -3,6 +3,9 @@
   "values": [
     "lottablocks:reinforced_glass",
     "lottablocks:soul_glass",
-    "lottablocks:glow_glass"
+    "lottablocks:glow_glass",
+    "lottablocks:reinforced_glass_pane",
+    "lottablocks:soul_glass_pane",
+    "lottablocks:glow_glass_pane"
   ]
 }

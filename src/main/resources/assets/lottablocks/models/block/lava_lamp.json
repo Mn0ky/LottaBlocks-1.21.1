@@ -1,5 +1,5 @@
 {
-  "parent": "block/cube_column",
+  "parent": "minecraft:block/cube_column",
   "textures": {
     "end": "lottablocks:block/lava_lamp_top",
     "side": "lottablocks:block/lava_lamp"

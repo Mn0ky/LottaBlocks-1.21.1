@@ -9,27 +9,64 @@ import net.ambersand.lottablocks.registry.blocks.ModBlocks;
 import net.ambersand.lottablocks.registry.misc.ModCreativeModeTabs;
 import net.ambersand.lottablocks.registry.sounds.ModSoundEvents;
 import net.minecraft.advancements.CriteriaTriggers;
+import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import java.util.Objects;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.gameevent.GameEvent;
+import java.util.Optional;
 
 public class LottaBlocksRegistry {
 
-    private static final ImmutableMap<Block, Block> GLOW_INK_SAC_APPLYING = ImmutableMap.<Block, Block>builder()
+    // region Block Changing Events
+
+    private static final ImmutableMap<Block, Block> GLOW_INK_BLOCKS = ImmutableMap.<Block, Block>builder()
         .put(Blocks.GLASS, ModBlocks.GLOW_GLASS)
+        .put(Blocks.GLASS_PANE, ModBlocks.GLOW_GLASS_PANE)
         .build();
 
-    private static final ImmutableMap<Block, Block> SCRAPING = ImmutableMap.<Block, Block>builder()
+    private static final ImmutableMap<Block, Block> SCRAPING_BLOCKS = ImmutableMap.<Block, Block>builder()
         .put(ModBlocks.GLOW_GLASS, Blocks.GLASS)
+        .put(ModBlocks.GLOW_GLASS_PANE, Blocks.GLASS_PANE)
         .build();
+
+    private static Optional<BlockState> getGlowInkSacBlocks(BlockState blockState) {
+        return Optional.ofNullable(GLOW_INK_BLOCKS.get(blockState.getBlock())).map((block) -> block.withPropertiesOf(blockState));
+    }
+
+    private static Optional<BlockState> getScrapingBlocks(BlockState blockState) {
+        return Optional.ofNullable(SCRAPING_BLOCKS.get(blockState.getBlock())).map((block) -> block.withPropertiesOf(blockState));
+    }
+
+    private static void executeBlockEvents(Level level, BlockPos blockPos, BlockState newBlockState, Player player, ItemStack itemStack, SoundEvent soundEvent, int levelEvent) {
+
+        // Sets the block to a new block and plays a sound
+
+        level.setBlockAndUpdate(blockPos, newBlockState);
+        level.playSound(null, blockPos, soundEvent, SoundSource.BLOCKS, 1.0F, 1.0F);
+        level.gameEvent(GameEvent.BLOCK_CHANGE, blockPos, GameEvent.Context.of(player, newBlockState));
+        level.levelEvent(player, levelEvent, blockPos, 1);
+
+        // Awards the player stats and criteria triggers
+
+        player.awardStat(Stats.ITEM_USED.get(itemStack.getItem()));
+
+        if (player instanceof ServerPlayer serverPlayer) {
+            CriteriaTriggers.ITEM_USED_ON_BLOCK.trigger(serverPlayer, blockPos, itemStack);
+        }
+    }
+
+    // endregion
 
     public static void registerAll() {
 
@@ -55,32 +92,18 @@ public class LottaBlocksRegistry {
 
         // region Interaction Events
 
-        UseBlockCallback.EVENT.register((player, level, hand, hitresult) -> {
+        UseBlockCallback.EVENT.register((player, level, interactionHand, hitResult) -> {
 
-            var blockPos = hitresult.getBlockPos();
-            var block = level.getBlockState(blockPos);
-            ItemStack heldItem = player.getItemInHand(hand);
+            BlockPos blockPos = hitResult.getBlockPos();
+            BlockState blockState = level.getBlockState(blockPos);
+            ItemStack heldItem = player.getItemInHand(interactionHand);
 
-            if (player.getItemInHand(hand).getItem() == Items.GLOW_INK_SAC && GLOW_INK_SAC_APPLYING.get(block.getBlock()) != null) {
+            Optional<BlockState> glowInkSacBlocks = getGlowInkSacBlocks(blockState);
+            Optional<BlockState> scrapingBlocks = getScrapingBlocks(blockState);
 
-                // region Applying Glow Ink Sacs to Glass
+            if (player.getItemInHand(interactionHand).getItem() == Items.GLOW_INK_SAC && glowInkSacBlocks.isPresent()) {
 
-                // Sets the Glass Block to Glow Glass
-
-                level.setBlockAndUpdate(blockPos, Objects.requireNonNull(GLOW_INK_SAC_APPLYING.get(block.getBlock())).defaultBlockState());
-
-                // Plays a sound and particles
-
-                level.playSound(null, blockPos, SoundEvents.GLOW_INK_SAC_USE, SoundSource.BLOCKS, 1F, 0.8F);
-                level.levelEvent(player, 3005, blockPos, 1);
-
-                // Awards the player stats and criteria triggers
-
-                player.awardStat(Stats.ITEM_USED.get(heldItem.getItem()));
-
-                if (player instanceof ServerPlayer serverPlayer) {
-                    CriteriaTriggers.ITEM_USED_ON_BLOCK.trigger(serverPlayer, blockPos, heldItem);
-                }
+                executeBlockEvents(level, blockPos, glowInkSacBlocks.get(), player, heldItem, SoundEvents.GLOW_INK_SAC_USE, 3005);
 
                 // If the player is not in Creative Mode, 1 Glow Ink Sac will be removed from the player's inventory
 
@@ -90,38 +113,17 @@ public class LottaBlocksRegistry {
 
                 return InteractionResult.SUCCESS;
 
-                // endregion
+            } else if (player.getItemInHand(interactionHand).getItem() instanceof AxeItem && scrapingBlocks.isPresent()) {
 
-            } else if (player.getItemInHand(hand).getItem() instanceof AxeItem && SCRAPING.get(block.getBlock()) != null) {
-
-                // region Scraping Glow Glass Back Into Glass
-
-                // Sets the Glow Glass back into Glass
-
-                level.setBlockAndUpdate(blockPos, Objects.requireNonNull(SCRAPING.get(block.getBlock())).defaultBlockState());
-
-                // Plays a sound and particles
-
-                level.playSound(null, blockPos, SoundEvents.AXE_WAX_OFF, SoundSource.BLOCKS, 1F, 1F);
-                level.levelEvent(player, 3004, blockPos, 1);
-
-                // Awards the player stats and criteria triggers
-
-                player.awardStat(Stats.ITEM_USED.get(heldItem.getItem()));
-
-                if (player instanceof ServerPlayer serverPlayer) {
-                    CriteriaTriggers.ITEM_USED_ON_BLOCK.trigger(serverPlayer, blockPos, heldItem);
-                }
+                executeBlockEvents(level, blockPos, scrapingBlocks.get(), player, heldItem, SoundEvents.AXE_WAX_OFF, 3004);
 
                 // If the player is not in Creative Mode, 1 durability damage will be done to the Axe
 
                 if (!player.isCreative()) {
-                    heldItem.hurtAndBreak(1, player, (axe) -> axe.broadcastBreakEvent(hand));
+                    heldItem.hurtAndBreak(1, player, (axe) -> axe.broadcastBreakEvent(interactionHand));
                 }
 
                 return InteractionResult.SUCCESS;
-
-                // endregion
 
             } else {
                 return InteractionResult.PASS;

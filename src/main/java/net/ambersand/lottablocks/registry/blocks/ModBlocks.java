@@ -366,11 +366,21 @@ public class ModBlocks {
         new TransparentBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).nonOpaque().mapColor(MapColor.COLOR_BLACK)
         .requiresTool().sounds(SoundType.GLASS).instrument(NoteBlockInstrument.HAT)));
 
+    public static final Block REINFORCED_GLASS_PANE = registerBlock("reinforced_glass_pane",
+        new IronBarsBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).nonOpaque().mapColor(MapColor.COLOR_BLACK)
+        .requiresTool().sounds(SoundType.GLASS).instrument(NoteBlockInstrument.HAT)));
+
     public static final Block SOUL_GLASS = registerBlock("soul_glass",
         new TransparentBlock(FabricBlockSettings.copyOf(Blocks.GLASS).mapColor(MapColor.COLOR_BROWN)));
 
+    public static final Block SOUL_GLASS_PANE = registerBlock("soul_glass_pane",
+        new IronBarsBlock(FabricBlockSettings.copyOf(Blocks.GLASS_PANE).mapColor(MapColor.COLOR_BROWN)));
+
     public static final Block GLOW_GLASS = registerBlock("glow_glass",
         new TransparentBlock(FabricBlockSettings.copyOf(Blocks.GLASS).luminance(5).emissiveLighting((state, world, pos) -> true)));
+
+    public static final Block GLOW_GLASS_PANE = registerBlock("glow_glass_pane",
+        new IronBarsBlock(FabricBlockSettings.copyOf(Blocks.GLASS_PANE).luminance(5).emissiveLighting((state, world, pos) -> true)));
 
     // endregion
 

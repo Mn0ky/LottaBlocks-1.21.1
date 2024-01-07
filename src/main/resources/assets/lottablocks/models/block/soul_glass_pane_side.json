@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_glass_pane_side",
+  "textures": {
+    "edge": "lottablocks:block/soul_glass_pane_top",
+    "pane": "lottablocks:block/soul_glass"
+  }
+}

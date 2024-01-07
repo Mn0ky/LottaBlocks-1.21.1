@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "lottablocks:reinforced_glass_pane",
+    "lottablocks:soul_glass_pane",
+    "lottablocks:glow_glass_pane"
+  ]
+}

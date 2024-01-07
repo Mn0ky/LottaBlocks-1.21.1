@@ -1,5 +1,5 @@
 {
-  "parent": "block/cube_column",
+  "parent": "minecraft:block/cube_column",
   "textures": {
     "end": "lottablocks:block/deepslate_pillar_top",
     "side": "lottablocks:block/deepslate_pillar"

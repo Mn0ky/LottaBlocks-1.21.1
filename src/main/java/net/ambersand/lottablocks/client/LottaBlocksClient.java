@@ -18,6 +18,7 @@ public class LottaBlocksClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(),
             ModBlocks.AMETHYST_FLOODLIGHT,
             ModBlocks.GLOW_GLASS,
+            ModBlocks.GLOW_GLASS_PANE,
             ModBlocks.WALL_MOSS,
             ModBlocks.WALL_WEB
         );
@@ -26,7 +27,9 @@ public class LottaBlocksClient implements ClientModInitializer {
 
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.translucent(),
             ModBlocks.REINFORCED_GLASS,
+            ModBlocks.REINFORCED_GLASS_PANE,
             ModBlocks.SOUL_GLASS,
+            ModBlocks.SOUL_GLASS_PANE,
             ModBlocks.CONGEALED_PISS
         );
     }

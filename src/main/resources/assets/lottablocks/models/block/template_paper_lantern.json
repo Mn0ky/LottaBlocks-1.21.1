@@ -1,4 +1,5 @@
 {
+	"parent": "minecraft:block/block",
 	"texture_size": [32, 16],
 	"textures": {
 		"lantern": "#lantern",
@@ -8,6 +9,7 @@
 		{
 			"from": [2, 2, 2],
 			"to": [14, 14, 14],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
 			"faces": {
 				"north": {"uv": [3, 2, 9, 14], "texture": "#lantern"},
 				"east": {"uv": [3, 2, 9, 14], "texture": "#lantern"},
@@ -20,70 +22,34 @@
 		{
 			"from": [4, 14, 4],
 			"to": [12, 16, 12],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
 			"faces": {
 				"north": {"uv": [4, 0, 8, 2], "texture": "#lantern"},
 				"east": {"uv": [4, 0, 8, 2], "texture": "#lantern"},
 				"south": {"uv": [4, 0, 8, 2], "texture": "#lantern"},
 				"west": {"uv": [4, 0, 8, 2], "texture": "#lantern"},
-				"up": {"uv": [9.5, 2, 13.5, 10], "texture": "#lantern"},
-				"down": {"uv": [9.5, 2, 13.5, 10], "texture": "#lantern"}
+				"up": {"uv": [9.5, 2, 13.5, 10], "texture": "#lantern", "cullface": "up"}
 			}
 		},
 		{
 			"from": [4, 0, 4],
 			"to": [12, 2, 12],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
 			"faces": {
 				"north": {"uv": [4, 14, 8, 16], "texture": "#lantern"},
 				"east": {"uv": [4, 14, 8, 16], "texture": "#lantern"},
 				"south": {"uv": [4, 14, 8, 16], "texture": "#lantern"},
 				"west": {"uv": [4, 14, 8, 16], "texture": "#lantern"},
-				"up": {"uv": [9.5, 2, 13.5, 10], "texture": "#lantern"},
-				"down": {"uv": [9.5, 2, 13.5, 10], "texture": "#lantern"}
+				"down": {"uv": [9.5, 2, 13.5, 10], "texture": "#lantern", "cullface": "down"}
 			}
 		}
 	],
-	"display": {
-		"thirdperson_righthand": {
-			"rotation": [75, 45, 0],
-			"translation": [0, 2.5, 0],
-			"scale": [0.375, 0.375, 0.375]
-		},
-		"thirdperson_lefthand": {
-			"rotation": [75, 45, 0],
-			"translation": [0, 2.5, 0],
-			"scale": [0.375, 0.375, 0.375]
-		},
-		"firstperson_righthand": {
-			"rotation": [0, 45, 0],
-			"scale": [0.4, 0.4, 0.4]
-		},
-		"firstperson_lefthand": {
-			"rotation": [0, 225, 0],
-			"scale": [0.4, 0.4, 0.4]
-		},
-		"ground": {
-			"translation": [0, 3, 0],
-			"scale": [0.25, 0.25, 0.25]
-		},
-		"gui": {
-			"rotation": [30, 225, 0],
-			"scale": [0.625, 0.625, 0.625]
-		},
-		"head": {
-			"translation": [0, 13.75, 0],
-			"scale": [1.24, 1.24, 1.24]
-		},
-		"fixed": {
-			"scale": [0.5, 0.5, 0.5]
-		}
-	},
 	"groups": [
 		{
 			"name": "paper_lantern",
 			"origin": [8, 8, 8],
 			"color": 0,
 			"nbt": "{}",
-			"armAnimationEnabled": false,
 			"children": [0, 1, 2]
 		}
 	]

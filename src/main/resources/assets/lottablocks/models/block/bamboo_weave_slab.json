@@ -1,5 +1,5 @@
 {
-  "parent": "block/slab",
+  "parent": "minecraft:block/slab",
   "textures": {
     "bottom": "lottablocks:block/bamboo_weave",
     "top": "lottablocks:block/bamboo_weave",

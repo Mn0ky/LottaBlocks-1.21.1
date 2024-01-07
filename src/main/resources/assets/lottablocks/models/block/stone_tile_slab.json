@@ -1,5 +1,5 @@
 {
-  "parent": "block/slab",
+  "parent": "minecraft:block/slab",
   "textures": {
     "bottom": "lottablocks:block/stone_tiles",
     "top": "lottablocks:block/stone_tiles",

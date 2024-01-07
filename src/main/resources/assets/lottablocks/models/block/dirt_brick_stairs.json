@@ -1,5 +1,5 @@
 {
-  "parent": "block/stairs",
+  "parent": "minecraft:block/stairs",
   "textures": {
     "bottom": "lottablocks:block/dirt_bricks",
     "top": "lottablocks:block/dirt_bricks",

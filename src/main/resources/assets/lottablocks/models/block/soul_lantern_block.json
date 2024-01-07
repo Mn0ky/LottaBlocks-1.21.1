@@ -1,5 +1,5 @@
 {
-  "parent": "block/cube_column",
+  "parent": "minecraft:block/cube_column",
   "textures": {
     "end": "lottablocks:block/soul_lantern_block_top",
     "side": "lottablocks:block/soul_lantern_block"

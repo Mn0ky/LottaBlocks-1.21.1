@@ -2,14 +2,14 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "minecraft:carved_pumpkin"
+      "item": "minecraft:glass_pane"
     },
     {
-      "item": "minecraft:soul_lantern"
+      "item": "minecraft:glow_ink_sac"
     }
   ],
   "result": {
-    "item": "lottablocks:jack_o_souls",
+    "item": "lottablocks:glow_glass_pane",
     "count": 1
   }
 }
