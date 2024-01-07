@@ -16,5 +16,6 @@ public class AmethystBrickWallBlock extends WallBlock implements AmethystChimeIn
     @SuppressWarnings("deprecation")
     public void onProjectileHit(@NotNull Level level, @NotNull BlockState blockState, @NotNull BlockHitResult hitResult, @NotNull Projectile projectile) {
         this.playChimeSounds(level, hitResult);
+        super.onProjectileHit(level, blockState, hitResult, projectile);
     }
 }

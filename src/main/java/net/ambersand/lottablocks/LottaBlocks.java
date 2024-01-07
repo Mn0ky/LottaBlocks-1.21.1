@@ -2,10 +2,12 @@ package net.ambersand.lottablocks;
 
 import net.fabricmc.api.ModInitializer;
 import net.ambersand.lottablocks.registry.LottaBlocksRegistry;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+@SuppressWarnings("unused")
 public class LottaBlocks implements ModInitializer {
 
 	public static final String MOD_ID = "lottablocks";
@@ -20,4 +22,10 @@ public class LottaBlocks implements ModInitializer {
 		LottaBlocksRegistry.registerAll();
 		LOGGER.info("He's coming.");
 	}
+
+	// Compatibility
+
+	public static final boolean HAS_ODYSSEY = FabricLoader.getInstance().isModLoaded("odyssey");
+	public static final boolean HAS_ENDLESS_ENCORE = FabricLoader.getInstance().isModLoaded("endlessencore");
+	public static final boolean HAS_PECULIA = FabricLoader.getInstance().isModLoaded("peculia");
 }

@@ -17,6 +17,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LightningBolt;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
@@ -48,32 +49,7 @@ public class LuigiteBlock extends Block {
             if (blockState.getValue(SCARY)) {
                 return InteractionResult.CONSUME;
             } else {
-
-                ServerPlayer cause = !level.isClientSide ? (ServerPlayer) player : null;
-                var minecraft = Minecraft.getInstance();
-
-                LightningBolt lightningBolt = EntityType.LIGHTNING_BOLT.create(level);
-
-                if (lightningBolt != null) {
-                    lightningBolt.moveTo(Vec3.atBottomCenterOf(player.getOnPos().above()));
-                    lightningBolt.setCause(cause);
-                    level.addFreshEntity(lightningBolt);
-                }
-
-                if (level.getServer() != null) {
-                    level.getServer().getPlayerList().broadcastSystemMessage(Component.translatable("gui.lottablocks.luigite_message").withStyle(ChatFormatting.DARK_RED), false);
-                }
-
-                if (player == minecraft.player) {
-                    minecraft.gameRenderer.displayItemActivation(ModItems.LUIGITE_JUMPSCARE.getDefaultInstance());
-                }
-
-                level.playSound(null, blockPos, ModSoundEvents.BLOCK_LUIGITE_SCREAM, SoundSource.BLOCKS, 1.0F, 1.0F);
-                level.gameEvent(player, GameEvent.BLOCK_ACTIVATE, blockPos);
-
-                level.setBlock(blockPos, blockState.setValue(SCARY, true), 3);
-                level.scheduleTick(blockPos, this, 20);
-
+                this.angerLuigite(level, player, blockPos, blockState, player.getOnPos().above());
                 return InteractionResult.sidedSuccess(level.isClientSide);
             }
         }
@@ -82,9 +58,46 @@ public class LuigiteBlock extends Block {
 
     @SuppressWarnings("deprecation")
     @Override
+    public void onProjectileHit(@NotNull Level level, @NotNull BlockState blockState, @NotNull BlockHitResult hitResult, @NotNull Projectile projectile) {
+        if (projectile.getOwner() != null && projectile.getOwner() instanceof Player player) {
+            this.angerLuigite(level, player, hitResult.getBlockPos(), blockState, hitResult.getBlockPos().above());
+        }
+        super.onProjectileHit(level, blockState, hitResult, projectile);
+    }
+
+    @SuppressWarnings("deprecation")
+    @Override
     public void tick(BlockState blockState, @NotNull ServerLevel serverLevel, @NotNull BlockPos blockPos, @NotNull RandomSource randomSource) {
         if (blockState.getValue(SCARY)) {
             serverLevel.setBlock(blockPos, blockState.setValue(SCARY, false), 3);
         }
+    }
+
+    private void angerLuigite(Level level, Player player, BlockPos blockPos, BlockState blockState, BlockPos lightningPos) {
+
+        ServerPlayer cause = !level.isClientSide ? (ServerPlayer) player : null;
+        var minecraft = Minecraft.getInstance();
+
+        LightningBolt lightningBolt = EntityType.LIGHTNING_BOLT.create(level);
+
+        if (lightningBolt != null) {
+            lightningBolt.moveTo(Vec3.atBottomCenterOf(lightningPos));
+            lightningBolt.setCause(cause);
+            level.addFreshEntity(lightningBolt);
+        }
+
+        if (level.getServer() != null) {
+            level.getServer().getPlayerList().broadcastSystemMessage(Component.translatable("gui.lottablocks.luigite_message").withStyle(ChatFormatting.DARK_RED), false);
+        }
+
+        if (player == minecraft.player) {
+            minecraft.gameRenderer.displayItemActivation(ModItems.LUIGITE_JUMPSCARE.getDefaultInstance());
+        }
+
+        level.playSound(null, blockPos, ModSoundEvents.BLOCK_LUIGITE_SCREAM, SoundSource.BLOCKS, 1.0F, 1.0F);
+        level.gameEvent(player, GameEvent.BLOCK_ACTIVATE, blockPos);
+
+        level.setBlock(blockPos, blockState.setValue(SCARY, true), 3);
+        level.scheduleTick(blockPos, this, 20);
     }
 }
