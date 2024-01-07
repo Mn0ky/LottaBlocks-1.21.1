@@ -47,7 +47,6 @@
     "lottablocks:polished_granite_brick_stairs",
     "lottablocks:polished_granite_brick_slab",
     "lottablocks:polished_granite_brick_wall",
-
     "lottablocks:polished_basalt_bricks",
     "lottablocks:polished_basalt_brick_stairs",
     "lottablocks:polished_basalt_brick_slab",
@@ -61,6 +60,8 @@
     "lottablocks:cut_cast_iron",
     "lottablocks:cut_cast_iron_stairs",
     "lottablocks:cut_cast_iron_slab",
+    "lottablocks:cast_iron_door",
+    "lottablocks:cast_iron_trapdoor",
     "lottablocks:chiseled_gold_block",
     "lottablocks:gold_pillar",
     "lottablocks:cut_gold",

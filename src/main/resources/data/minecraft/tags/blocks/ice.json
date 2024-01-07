@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "lottablocks:packed_ice_bricks",
+    "lottablocks:packed_ice_brick_stairs",
+    "lottablocks:packed_ice_brick_slab",
+    "lottablocks:packed_ice_brick_wall"
+  ]
+}

@@ -20,7 +20,9 @@ public class LottaBlocksClient implements ClientModInitializer {
             ModBlocks.GLOW_GLASS,
             ModBlocks.GLOW_GLASS_PANE,
             ModBlocks.WALL_MOSS,
-            ModBlocks.WALL_WEB
+            ModBlocks.WALL_WEB,
+            ModBlocks.CAST_IRON_DOOR,
+            ModBlocks.CAST_IRON_TRAPDOOR
         );
 
         // Renders Blocks in List as Transparent (With Translucency)

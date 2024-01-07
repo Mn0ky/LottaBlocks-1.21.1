@@ -2,10 +2,12 @@ package net.ambersand.lottablocks.registry.blocks;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.type.BlockSetTypeBuilder;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.ambersand.lottablocks.LottaBlocks;
@@ -15,6 +17,13 @@ import net.minecraft.world.level.material.PushReaction;
 
 @SuppressWarnings("unused")
 public class ModBlocks {
+
+    // Block Set Types
+
+    public static final BlockSetType CAST_IRON_TYPE = BlockSetTypeBuilder.copyOf(BlockSetType.IRON)
+        .soundGroup(SoundType.NETHERITE_BLOCK).register(LottaBlocks.id("cast_iron"));
+
+    // Blocks
 
     // region Amethyst Blocks
 
@@ -256,6 +265,12 @@ public class ModBlocks {
 
     public static final Block CUT_CAST_IRON_SLAB = registerBlock("cut_cast_iron_slab",
         new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.CUT_CAST_IRON)));
+
+    public static final Block CAST_IRON_DOOR = registerBlock("cast_iron_door",
+        new DoorBlock(CAST_IRON_TYPE, FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.COLOR_BLACK)));
+
+    public static final Block CAST_IRON_TRAPDOOR = registerBlock("cast_iron_trapdoor",
+        new TrapDoorBlock(CAST_IRON_TYPE, FabricBlockSettings.copyOf(Blocks.IRON_TRAPDOOR).mapColor(MapColor.COLOR_BLACK)));
 
     // endregion
 
