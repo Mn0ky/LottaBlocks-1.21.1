@@ -223,5 +223,11 @@
       "lottablocks:block/luigite/scream"
     ],
     "subtitle": "subtitles.block.luigite.scream"
+  },
+  "block.note_block.wahoo": {
+    "sounds": [
+      "lottablocks:block/luigite/wahoo"
+    ],
+    "subtitle": "subtitles.block.note_block.note"
   }
 }

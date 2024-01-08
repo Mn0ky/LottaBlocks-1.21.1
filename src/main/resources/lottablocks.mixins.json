@@ -6,7 +6,8 @@
   "mixins": [
     "PlayerManagerMixin",
     "blocks.GlassBlockMixin",
-    "blocks.GlassPaneBlockMixin"
+    "blocks.GlassPaneBlockMixin",
+    "blocks.NoteBlockInstrumentMixin"
   ],
   "client": [
   ],

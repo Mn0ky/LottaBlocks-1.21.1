@@ -18,6 +18,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LightningBolt;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
@@ -45,7 +46,7 @@ public class LuigiteBlock extends Block {
     @SuppressWarnings("deprecation")
     @Override
     public @NotNull InteractionResult use(@NotNull BlockState blockState, @NotNull Level level, @NotNull BlockPos blockPos, @NotNull Player player, @NotNull InteractionHand interactionHand, @NotNull BlockHitResult blockHitResult) {
-        if (!player.getItemInHand(interactionHand).is(ModTags.LUIGITE_BLOCKS)) {
+        if (!player.getItemInHand(interactionHand).is(ModTags.LUIGITE_BLOCKS) && !player.getItemInHand(interactionHand).is(Items.NOTE_BLOCK)) {
             if (blockState.getValue(SCARY)) {
                 return InteractionResult.CONSUME;
             } else {

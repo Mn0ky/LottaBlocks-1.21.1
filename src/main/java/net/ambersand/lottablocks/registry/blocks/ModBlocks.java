@@ -1,5 +1,6 @@
 package net.ambersand.lottablocks.registry.blocks;
 
+import net.ambersand.lottablocks.registry.misc.ModNoteBlockInstruments;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.type.BlockSetTypeBuilder;
@@ -465,7 +466,7 @@ public class ModBlocks {
     // region Luigite
 
     public static final Block LUIGITE = registerBlock("luigite",
-        new LuigiteBlock(FabricBlockSettings.copyOf(Blocks.BEDROCK).mapColor(MapColor.COLOR_GREEN).sound(ModSoundEvents.LUIGITE)));
+        new LuigiteBlock(FabricBlockSettings.copyOf(Blocks.BEDROCK).mapColor(MapColor.COLOR_GREEN).sound(ModSoundEvents.LUIGITE).instrument(ModNoteBlockInstruments.WAHOO)));
 
     public static final Block LUIGITE_HD = registerBlock("luigite_hd",
         new LuigiteBlock(FabricBlockSettings.copyOf(ModBlocks.LUIGITE)));

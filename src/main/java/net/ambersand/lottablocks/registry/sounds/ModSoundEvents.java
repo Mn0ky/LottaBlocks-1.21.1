@@ -36,6 +36,8 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_LUIGITE_FALL = registerSoundEvent("block.luigite.fall");
     public static final SoundEvent BLOCK_LUIGITE_SCREAM = registerSoundEvent("block.luigite.scream");
 
+    public static final SoundEvent NOTE_BLOCK_WAHOO = registerSoundEvent("block.note_block.wahoo");
+
     // endregion
 
     // region Block Sound Groups
