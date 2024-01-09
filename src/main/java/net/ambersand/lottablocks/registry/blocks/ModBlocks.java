@@ -310,8 +310,8 @@ public class ModBlocks {
     // region Lamps and Misc Blocks
 
     public static final Block LAVA_LAMP = registerBlock("lava_lamp",
-        new LavaLampBlock(FabricBlockSettings.create().mapColor(MapColor.COLOR_BLACK)
-        .sounds(ModSoundEvents.LAVA_LAMP).luminance(15).requiresTool().hardness(3.5F).strength(3.5F)));
+        new LavaLampBlock(FabricBlockSettings.create().mapColor(MapColor.COLOR_BLACK).luminance(15)
+        .requiresTool().hardness(3.5F).strength(3.5F).sounds(ModSoundEvents.LAVA_LAMP).instrument(NoteBlockInstrument.HAT)));
 
     public static final Block HONEYLAMP = registerBlock("honeylamp",
         new Block(FabricBlockSettings.copyOf(Blocks.HONEYCOMB_BLOCK).luminance(15)));
@@ -321,7 +321,8 @@ public class ModBlocks {
 
     public static final Block LANTERN_BLOCK = registerBlock("lantern_block",
         new Block(FabricBlockSettings.create().mapColor(MapColor.COLOR_BLACK)
-        .sounds(SoundType.LANTERN).luminance(15).requiresTool().hardness(3.5F).strength(3.5F)));
+        .sounds(SoundType.LANTERN).instrument(NoteBlockInstrument.IRON_XYLOPHONE)
+        .luminance(15).requiresTool().hardness(3.5F).strength(3.5F)));
 
     public static final Block SOUL_LANTERN_BLOCK = registerBlock("soul_lantern_block",
         new Block(FabricBlockSettings.copyOf(ModBlocks.LANTERN_BLOCK).luminance(10)));
@@ -466,7 +467,8 @@ public class ModBlocks {
     // region Luigite
 
     public static final Block LUIGITE = registerBlock("luigite",
-        new LuigiteBlock(FabricBlockSettings.copyOf(Blocks.BEDROCK).mapColor(MapColor.COLOR_GREEN).sound(ModSoundEvents.LUIGITE).instrument(ModNoteBlockInstruments.WAHOO)));
+        new LuigiteBlock(FabricBlockSettings.copyOf(Blocks.BEDROCK).mapColor(MapColor.COLOR_GREEN)
+        .sound(ModSoundEvents.LUIGITE).instrument(ModNoteBlockInstruments.WAHOO)));
 
     public static final Block LUIGITE_HD = registerBlock("luigite_hd",
         new LuigiteBlock(FabricBlockSettings.copyOf(ModBlocks.LUIGITE)));
