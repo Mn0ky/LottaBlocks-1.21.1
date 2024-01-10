@@ -10,6 +10,7 @@ import net.ambersand.lottablocks.registry.misc.ModCreativeModeTabs;
 import net.ambersand.lottablocks.registry.sounds.ModSoundEvents;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -65,6 +66,12 @@ public class LottaBlocksRegistry {
             CriteriaTriggers.ITEM_USED_ON_BLOCK.trigger(serverPlayer, blockPos, itemStack);
         }
     }
+
+    // endregion
+
+    // region Misc
+
+    public static final ResourceLocation LUIGITE_PACKET_ID = LottaBlocks.id("luigite_packet");
 
     // endregion
 

@@ -1,9 +1,12 @@
 package net.ambersand.lottablocks.client;
 
+import net.ambersand.lottablocks.registry.LottaBlocksRegistry;
+import net.ambersand.lottablocks.registry.items.ModItems;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.minecraft.client.renderer.RenderType;
 import net.ambersand.lottablocks.registry.blocks.ModBlocks;
 
@@ -34,5 +37,10 @@ public class LottaBlocksClient implements ClientModInitializer {
             ModBlocks.SOUL_GLASS_PANE,
             ModBlocks.CONGEALED_PISS
         );
+
+        // Luigite Item Packet (Lol)
+
+        ClientPlayNetworking.registerGlobalReceiver(LottaBlocksRegistry.LUIGITE_PACKET_ID,((client, handler, buf, responseSender) ->
+        client.gameRenderer.displayItemActivation(ModItems.LUIGITE_JUMPSCARE.getDefaultInstance())));
     }
 }

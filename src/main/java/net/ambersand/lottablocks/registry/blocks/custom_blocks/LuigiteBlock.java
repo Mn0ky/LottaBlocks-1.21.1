@@ -1,11 +1,10 @@
 package net.ambersand.lottablocks.registry.blocks.custom_blocks;
 
 import net.ambersand.lottablocks.registry.blocks.ModBlockStateProperties;
-import net.ambersand.lottablocks.registry.items.ModItems;
+import net.ambersand.lottablocks.registry.items.custom_items.LuigiteJumpscareItem;
 import net.ambersand.lottablocks.registry.misc.ModTags;
 import net.ambersand.lottablocks.registry.sounds.ModSoundEvents;
 import net.minecraft.ChatFormatting;
-import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
@@ -60,7 +59,7 @@ public class LuigiteBlock extends Block {
     @SuppressWarnings("deprecation")
     @Override
     public void onProjectileHit(@NotNull Level level, @NotNull BlockState blockState, @NotNull BlockHitResult hitResult, @NotNull Projectile projectile) {
-        if (projectile.getOwner() != null && projectile.getOwner() instanceof Player player) {
+        if (projectile.getOwner() != null && projectile.getOwner() instanceof Player player && !player.level().isClientSide()) {
             this.angerLuigite(level, player, hitResult.getBlockPos(), blockState, hitResult.getBlockPos().above());
         }
         super.onProjectileHit(level, blockState, hitResult, projectile);
@@ -76,8 +75,9 @@ public class LuigiteBlock extends Block {
 
     private void angerLuigite(Level level, Player player, BlockPos blockPos, BlockState blockState, BlockPos lightningPos) {
 
+        LuigiteJumpscareItem.sendLuigiteJumpscareAnimation(player);
+
         ServerPlayer cause = !level.isClientSide ? (ServerPlayer) player : null;
-        var minecraft = Minecraft.getInstance();
 
         LightningBolt lightningBolt = EntityType.LIGHTNING_BOLT.create(level);
 
@@ -91,11 +91,7 @@ public class LuigiteBlock extends Block {
             level.getServer().getPlayerList().broadcastSystemMessage(Component.translatable("gui.lottablocks.luigite_message").withStyle(ChatFormatting.DARK_RED), false);
         }
 
-        if (player == minecraft.player) {
-            minecraft.gameRenderer.displayItemActivation(ModItems.LUIGITE_JUMPSCARE.getDefaultInstance());
-        }
-
-        level.playSound(null, blockPos, ModSoundEvents.BLOCK_LUIGITE_SCREAM, SoundSource.BLOCKS, 1.0F, 1.0F);
+        level.playSound(null, blockPos, ModSoundEvents.BLOCK_LUIGITE_SCREAM, SoundSource.BLOCKS, 10.0F, 1.0F);
         level.gameEvent(player, GameEvent.BLOCK_ACTIVATE, blockPos);
 
         level.setBlock(blockPos, blockState.setValue(SCARY, true), 3);
