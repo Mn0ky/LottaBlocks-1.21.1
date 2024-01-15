@@ -7,8 +7,8 @@
     }
   },
   "pattern": [
-    "##",
-    "##"
+    "###",
+    "###"
   ],
   "result": {
     "item": "lottablocks:cast_iron_trapdoor"
