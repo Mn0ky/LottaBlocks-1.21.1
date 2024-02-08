@@ -24,8 +24,6 @@ public class GlassBlockMixin extends Block {
 
         TagKey<Block> occludingGlass = ModTags.OCCLUDING_GLASS;
 
-        if (blockState.is(occludingGlass)) {
-            cir.setReturnValue(adjacentBlock.is(occludingGlass) || super.skipRendering(blockState, adjacentBlock, direction));
-        }
+        if (blockState.is(occludingGlass)) cir.setReturnValue(adjacentBlock.is(occludingGlass) || super.skipRendering(blockState, adjacentBlock, direction));
     }
 }

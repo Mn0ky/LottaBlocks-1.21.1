@@ -29,6 +29,7 @@ public class CongealedPissBlock extends Block {
 
             livingEntity.makeStuckInBlock(blockState, new Vec3(0.9D, 1.5D, 0.9D));
         }
+
         super.entityInside(blockState, level, blockPos, entity);
     }
 }

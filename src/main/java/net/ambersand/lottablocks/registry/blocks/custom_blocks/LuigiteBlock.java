@@ -28,6 +28,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
 
+@SuppressWarnings("deprecation")
 public class LuigiteBlock extends Block {
 
     private static final BooleanProperty SCARY = ModBlockStateProperties.SCARY;
@@ -42,7 +43,6 @@ public class LuigiteBlock extends Block {
         builder.add(SCARY);
     }
 
-    @SuppressWarnings("deprecation")
     @Override
     public @NotNull InteractionResult use(@NotNull BlockState blockState, @NotNull Level level, @NotNull BlockPos blockPos, @NotNull Player player, @NotNull InteractionHand interactionHand, @NotNull BlockHitResult blockHitResult) {
         if (!player.getItemInHand(interactionHand).is(ModTags.LUIGITE_BLOCKS) && !player.getItemInHand(interactionHand).is(Items.NOTE_BLOCK)) {
@@ -56,7 +56,6 @@ public class LuigiteBlock extends Block {
         return super.use(blockState, level, blockPos, player, interactionHand, blockHitResult);
     }
 
-    @SuppressWarnings("deprecation")
     @Override
     public void onProjectileHit(@NotNull Level level, @NotNull BlockState blockState, @NotNull BlockHitResult hitResult, @NotNull Projectile projectile) {
         if (projectile.getOwner() != null && projectile.getOwner() instanceof Player player && !player.level().isClientSide()) {
@@ -65,7 +64,6 @@ public class LuigiteBlock extends Block {
         super.onProjectileHit(level, blockState, hitResult, projectile);
     }
 
-    @SuppressWarnings("deprecation")
     @Override
     public void tick(BlockState blockState, @NotNull ServerLevel serverLevel, @NotNull BlockPos blockPos, @NotNull RandomSource randomSource) {
         if (blockState.getValue(SCARY)) {
@@ -87,10 +85,7 @@ public class LuigiteBlock extends Block {
             level.addFreshEntity(lightningBolt);
         }
 
-        if (level.getServer() != null) {
-            level.getServer().getPlayerList().broadcastSystemMessage(Component.translatable("gui.lottablocks.luigite_message").withStyle(ChatFormatting.DARK_RED), false);
-        }
-
+        if (level.getServer() != null) level.getServer().getPlayerList().broadcastSystemMessage(Component.translatable("gui.lottablocks.luigite_message").withStyle(ChatFormatting.DARK_RED), false);
         level.playSound(null, blockPos, ModSoundEvents.BLOCK_LUIGITE_SCREAM, SoundSource.BLOCKS, 10.0F, 1.0F);
         level.gameEvent(player, GameEvent.BLOCK_ACTIVATE, blockPos);
 

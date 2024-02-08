@@ -42,10 +42,7 @@ public class LuigiteJumpscareItem extends Item {
     public boolean hurtEnemy(ItemStack itemStack, LivingEntity target, LivingEntity attacker) {
 
         target.level().playSound(null, target.getOnPos().above(), ModSoundEvents.BLOCK_LUIGITE_SCREAM, SoundSource.PLAYERS, 10.0F, 1.0F);
-
-        if (target instanceof Player player) {
-            sendLuigiteJumpscareAnimation(player);
-        }
+        if (target instanceof Player player) sendLuigiteJumpscareAnimation(player);
 
         return super.hurtEnemy(itemStack, target, attacker);
     }

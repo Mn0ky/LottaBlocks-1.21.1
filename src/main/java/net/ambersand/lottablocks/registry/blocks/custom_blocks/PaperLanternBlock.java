@@ -35,10 +35,9 @@ public class PaperLanternBlock extends Block {
         super.onProjectileHit(level, blockState, hitResult, projectile);
     }
 
-    @SuppressWarnings("deprecation")
     @Override
     public void entityInside(@NotNull BlockState blockState, @NotNull Level level, @NotNull BlockPos blockPos, Entity entity) {
-        if (LottaBlocks.HAS_ENDLESS_ENCORE && entity instanceof LivingEntity livingEntity && livingEntity.isFallFlying() && livingEntity.getDeltaMovement().horizontalDistance() >= 0.8) {
+        if (LottaBlocks.HAS_ENDLESS_ENCORE && entity instanceof LivingEntity livingEntity && livingEntity.isFallFlying() && livingEntity.getDeltaMovement().horizontalDistance() >= 0.7) {
             this.destroyPaperLantern(level, blockPos);
         }
         super.entityInside(blockState, level, blockPos, entity);

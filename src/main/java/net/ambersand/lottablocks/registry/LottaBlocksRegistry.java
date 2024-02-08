@@ -61,10 +61,7 @@ public class LottaBlocksRegistry {
         // Awards the player stats and criteria triggers
 
         player.awardStat(Stats.ITEM_USED.get(itemStack.getItem()));
-
-        if (player instanceof ServerPlayer serverPlayer) {
-            CriteriaTriggers.ITEM_USED_ON_BLOCK.trigger(serverPlayer, blockPos, itemStack);
-        }
+        if (player instanceof ServerPlayer serverPlayer) CriteriaTriggers.ITEM_USED_ON_BLOCK.trigger(serverPlayer, blockPos, itemStack);
     }
 
     // endregion
@@ -114,10 +111,7 @@ public class LottaBlocksRegistry {
 
                 // If the player is not in Creative Mode, 1 Glow Ink Sac will be removed from the player's inventory
 
-                if (!player.getAbilities().instabuild) {
-                    heldItem.shrink(1);
-                }
-
+                if (!player.getAbilities().instabuild) heldItem.shrink(1);
                 return InteractionResult.SUCCESS;
 
             } else if (player.getItemInHand(interactionHand).getItem() instanceof AxeItem && scrapingBlocks.isPresent()) {
@@ -126,10 +120,7 @@ public class LottaBlocksRegistry {
 
                 // If the player is not in Creative Mode, 1 durability damage will be done to the Axe
 
-                if (!player.isCreative()) {
-                    heldItem.hurtAndBreak(1, player, (axe) -> axe.broadcastBreakEvent(interactionHand));
-                }
-
+                if (!player.isCreative()) heldItem.hurtAndBreak(1, player, (axe) -> axe.broadcastBreakEvent(interactionHand));
                 return InteractionResult.SUCCESS;
 
             } else {
