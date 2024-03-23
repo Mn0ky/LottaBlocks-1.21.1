@@ -48,9 +48,9 @@ public class MossOverlayBlock extends MultifaceBlock implements BonemealableBloc
     }
 
     @Override
-    public @NotNull BlockState updateShape(BlockState blockState, @NotNull Direction direction, @NotNull BlockState neighborState, @NotNull LevelAccessor levelAccessor, @NotNull BlockPos blockPos, @NotNull BlockPos neighborPos) {
+    public @NotNull BlockState updateShape(BlockState blockState, @NotNull Direction direction, @NotNull BlockState adjacentState, @NotNull LevelAccessor levelAccessor, @NotNull BlockPos blockPos, @NotNull BlockPos adjacentPos) {
         if (blockState.getValue(WATERLOGGED)) levelAccessor.scheduleTick(blockPos, Fluids.WATER, Fluids.WATER.getTickDelay(levelAccessor));
-        return super.updateShape(blockState, direction, neighborState, levelAccessor, blockPos, neighborPos);
+        return super.updateShape(blockState, direction, adjacentState, levelAccessor, blockPos, adjacentPos);
     }
 
     @SuppressWarnings("deprecation")
@@ -78,7 +78,7 @@ public class MossOverlayBlock extends MultifaceBlock implements BonemealableBloc
 
     @Override
     public boolean isValidBonemealTarget(@NotNull LevelReader levelReader, @NotNull BlockPos blockPos, @NotNull BlockState blockState) {
-        return Direction.stream().anyMatch(direction -> this.spreader.canSpreadInAnyDirection(blockState, levelReader, blockPos, direction.getOpposite()));
+        return Direction.stream().anyMatch(direction -> this.getSpreader().canSpreadInAnyDirection(blockState, levelReader, blockPos, direction.getOpposite()));
     }
 
     @Override
@@ -88,7 +88,7 @@ public class MossOverlayBlock extends MultifaceBlock implements BonemealableBloc
 
     @Override
     public void performBonemeal(@NotNull ServerLevel serverLevel, @NotNull RandomSource randomSource, @NotNull BlockPos blockPos, @NotNull BlockState blockState) {
-        this.spreader.spreadFromRandomFaceTowardRandomDirection(blockState, serverLevel, blockPos, randomSource);
+        this.getSpreader().spreadFromRandomFaceTowardRandomDirection(blockState, serverLevel, blockPos, randomSource);
     }
 
     // endregion

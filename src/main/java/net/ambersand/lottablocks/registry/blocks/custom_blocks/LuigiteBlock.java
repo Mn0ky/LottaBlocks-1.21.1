@@ -35,7 +35,7 @@ public class LuigiteBlock extends Block {
 
     public LuigiteBlock(Properties properties) {
         super(properties);
-        this.registerDefaultState(this.stateDefinition.any().setValue(SCARY, false));
+        this.registerDefaultState(this.getStateDefinition().any().setValue(SCARY, false));
     }
 
     @Override
@@ -50,7 +50,7 @@ public class LuigiteBlock extends Block {
                 return InteractionResult.CONSUME;
             } else {
                 this.angerLuigite(level, player, blockPos, blockState, player.getOnPos().above());
-                return InteractionResult.sidedSuccess(level.isClientSide);
+                return InteractionResult.sidedSuccess(level.isClientSide());
             }
         }
         return super.use(blockState, level, blockPos, player, interactionHand, blockHitResult);
@@ -75,7 +75,7 @@ public class LuigiteBlock extends Block {
 
         LuigiteJumpscareItem.sendLuigiteJumpscareAnimation(player);
 
-        ServerPlayer cause = !level.isClientSide ? (ServerPlayer) player : null;
+        ServerPlayer cause = !level.isClientSide() ? (ServerPlayer) player : null;
 
         LightningBolt lightningBolt = EntityType.LIGHTNING_BOLT.create(level);
 

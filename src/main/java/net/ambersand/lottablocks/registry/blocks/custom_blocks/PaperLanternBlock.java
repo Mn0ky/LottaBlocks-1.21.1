@@ -44,8 +44,8 @@ public class PaperLanternBlock extends Block {
     }
 
     private void destroyPaperLantern(Level level, BlockPos blockPos) {
-        if (!level.isClientSide) {
-            level.playSound(null, blockPos, ModSoundEvents.BLOCK_PAPER_LANTERN_BREAK, SoundSource.BLOCKS, 1.0F, 1.0F + level.random.nextFloat() * 1.2F);
+        if (!level.isClientSide()) {
+            level.playSound(null, blockPos, ModSoundEvents.BLOCK_PAPER_LANTERN_BREAK, SoundSource.BLOCKS, 1.0F, 1.0F + level.getRandom().nextFloat() * 1.2F);
             level.destroyBlock(blockPos, true);
         }
     }

@@ -50,7 +50,6 @@ public class LuigiteJumpscareItem extends Item {
     public static void sendLuigiteJumpscareAnimation(Player player) {
         if (player instanceof ServerPlayer serverPlayer) {
             FriendlyByteBuf packet = new FriendlyByteBuf(Unpooled.buffer());
-            packet.writeInt(0);
             ServerPlayNetworking.send(serverPlayer, LottaBlocksRegistry.LUIGITE_PACKET_ID, packet);
         }
     }
