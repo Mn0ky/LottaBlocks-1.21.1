@@ -64,7 +64,6 @@
 
   "block.lottablocks.lantern_block": "Lantern Block",
   "block.lottablocks.soul_lantern_block": "Soul Lantern Block",
-  "block.lottablocks.void_lantern_block": "Void Lantern Block",
 
   "block.lottablocks.lava_lamp": "Lava Lamp",
   "block.lottablocks.amethyst_floodlight": "Amethyst Floodlight",
@@ -99,7 +98,6 @@
   "block.lottablocks.jack_o_souls": "Jack o'Souls",
 
   "block.lottablocks.deepslate_pillar": "Deepslate Pillar",
-  "block.lottablocks.end_stone_pillar": "End Stone Pillar",
 
   "block.lottablocks.stone_tiles": "Stone Tiles",
   "block.lottablocks.stone_tile_stairs": "Stone Tile Stairs",
@@ -147,6 +145,11 @@
   "block.lottablocks.packed_ice_brick_slab": "Packed Ice Brick Slab",
   "block.lottablocks.packed_ice_brick_stairs": "Packed Ice Brick Stairs",
   "block.lottablocks.packed_ice_brick_wall": "Packed Ice Brick Wall",
+
+  "block.lottablocks.infested_cobblestone_bricks": "Infested Cobblestone Bricks",
+  "block.lottablocks.infested_stone_pillar": "Infested Stone Pillar",
+  "block.lottablocks.infested_stone_tiles": "Infested Stone Tiles",
+  "block.lottablocks.infested_deepslate_pillar": "Infested Deepslate Pillar",
 
   "item.lottablocks.luigite_jumpscare": "Luigite Jumpscare",
   "block.lottablocks.luigite": "Luigite",

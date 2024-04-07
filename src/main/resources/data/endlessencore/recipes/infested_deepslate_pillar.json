@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "lottablocks:deepslate_pillar"
+    },
+    {
+      "item": "endlessencore:silverfish_eggs"
+    }
+  ],
+  "result": {
+    "item": "lottablocks:infested_deepslate_pillar"
+  }
+}

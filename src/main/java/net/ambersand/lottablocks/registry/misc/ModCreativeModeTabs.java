@@ -56,7 +56,8 @@ public class ModCreativeModeTabs {
             ModBlocks.CHISELED_AMETHYST, ModBlocks.AMETHYST_PILLAR, ModBlocks.AMETHYST_BRICKS, ModBlocks.AMETHYST_BRICK_STAIRS, ModBlocks.AMETHYST_BRICK_SLAB, ModBlocks.AMETHYST_BRICK_WALL,
             ModBlocks.GLOW_GLASS, ModBlocks.GLOW_GLASS_PANE, ModBlocks.SOUL_GLASS, ModBlocks.SOUL_GLASS_PANE, ModBlocks.REINFORCED_GLASS, ModBlocks.REINFORCED_GLASS_PANE, ModBlocks.WALL_MOSS, ModBlocks.WALL_WEB, ModBlocks.JACK_O_SOULS,
             ModBlocks.LANTERN_BLOCK, ModBlocks.SOUL_LANTERN_BLOCK, ModBlocks.AMETHYST_FLOODLIGHT, ModBlocks.LAVA_LAMP, ModBlocks.HONEYLAMP,
-            ModBlocks.BLOOMING_PAPER_LANTERN, ModBlocks.SUNRISE_PAPER_LANTERN, ModBlocks.TWILIGHT_PAPER_LANTERN
+            ModBlocks.BLOOMING_PAPER_LANTERN, ModBlocks.SUNRISE_PAPER_LANTERN, ModBlocks.TWILIGHT_PAPER_LANTERN,
+            ModBlocks.INFESTED_STONE_PILLAR, ModBlocks.INFESTED_STONE_TILES, ModBlocks.INFESTED_COBBLESTONE_BRICKS, ModBlocks.INFESTED_DEEPSLATE_PILLAR
             );
         });
 
@@ -145,6 +146,8 @@ public class ModCreativeModeTabs {
             entries.addAfter(Blocks.REDSTONE_LAMP, ModBlocks.LAVA_LAMP);
             entries.addAfter(Blocks.SHROOMLIGHT, ModBlocks.HONEYLAMP);
             entries.addAfter(Blocks.PEARLESCENT_FROGLIGHT, ModBlocks.BLOOMING_PAPER_LANTERN, ModBlocks.SUNRISE_PAPER_LANTERN, ModBlocks.TWILIGHT_PAPER_LANTERN);
+            entries.addAfter(Blocks.INFESTED_CHISELED_STONE_BRICKS, ModBlocks.INFESTED_STONE_PILLAR, ModBlocks.INFESTED_STONE_TILES, ModBlocks.INFESTED_COBBLESTONE_BRICKS);
+            entries.addAfter(Blocks.INFESTED_DEEPSLATE, ModBlocks.INFESTED_DEEPSLATE_PILLAR);
         });
 
         // endregion

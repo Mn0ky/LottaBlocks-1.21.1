@@ -93,6 +93,10 @@
     "lottablocks:packed_ice_bricks",
     "lottablocks:packed_ice_brick_stairs",
     "lottablocks:packed_ice_brick_slab",
-    "lottablocks:packed_ice_brick_wall"
+    "lottablocks:packed_ice_brick_wall",
+    "lottablocks:infested_cobblestone_bricks",
+    "lottablocks:infested_stone_pillar",
+    "lottablocks:infested_stone_tiles",
+    "lottablocks:infested_deepslate_pillar"
   ]
 }

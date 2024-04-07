@@ -8,6 +8,7 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
@@ -461,6 +462,22 @@ public class ModBlocks {
 
     public static final Block PACKED_ICE_BRICK_WALL = registerBlock("packed_ice_brick_wall",
         new WallBlock(FabricBlockSettings.copyOf(ModBlocks.PACKED_ICE_BRICKS)));
+
+    // endregion
+
+    // region Infested Blocks
+
+    public static final Block INFESTED_COBBLESTONE_BRICKS = registerBlock("infested_cobblestone_bricks",
+        new InfestedBlock(COBBLESTONE_BRICKS, BlockBehaviour.Properties.of().mapColor(MapColor.CLAY)));
+
+    public static final Block INFESTED_STONE_PILLAR = registerBlock("infested_stone_pillar",
+        new InfestedRotatedPillarBlock(STONE_PILLAR, BlockBehaviour.Properties.of().mapColor(MapColor.CLAY)));
+
+    public static final Block INFESTED_STONE_TILES = registerBlock("infested_stone_tiles",
+        new InfestedBlock(STONE_TILES, BlockBehaviour.Properties.of().mapColor(MapColor.CLAY)));
+
+    public static final Block INFESTED_DEEPSLATE_PILLAR = registerBlock("infested_deepslate_pillar",
+        new InfestedRotatedPillarBlock(DEEPSLATE_PILLAR, BlockBehaviour.Properties.of().mapColor(MapColor.DEEPSLATE).sound(SoundType.DEEPSLATE_BRICKS)));
 
     // endregion
 
