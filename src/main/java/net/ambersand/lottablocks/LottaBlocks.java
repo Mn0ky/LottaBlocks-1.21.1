@@ -27,5 +27,4 @@ public class LottaBlocks implements ModInitializer {
 
 	public static final boolean HAS_ODYSSEY = FabricLoader.getInstance().isModLoaded("odyssey");
 	public static final boolean HAS_ENDLESS_ENCORE = FabricLoader.getInstance().isModLoaded("endlessencore");
-	public static final boolean HAS_PECULIA = FabricLoader.getInstance().isModLoaded("peculia");
 }
