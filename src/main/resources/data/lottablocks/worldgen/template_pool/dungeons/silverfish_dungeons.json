@@ -1,0 +1,14 @@
+{
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "lottablocks:dungeons/silverfish_dungeon",
+        "processors": "lottablocks:silverfish_dungeon_degradation",
+        "projection": "rigid"
+      },
+      "weight": 1
+    }
+  ]
+}

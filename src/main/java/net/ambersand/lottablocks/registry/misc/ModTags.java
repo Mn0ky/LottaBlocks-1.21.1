@@ -4,6 +4,7 @@ import net.ambersand.lottablocks.LottaBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 
 @SuppressWarnings("all")
@@ -22,6 +23,20 @@ public class ModTags {
 
     // endregion
 
+    // region Biome Tags
+
+    public static final TagKey<Biome>
+        HAS_ZOMBIE_DUNGEON = registerBiomeTag("has_structure/zombie_dungeon"),
+        HAS_SKELETON_DUNGEON = registerBiomeTag("has_structure/skeleton_dungeon"),
+        HAS_HUSK_DUNGEON = registerBiomeTag("has_structure/husk_dungeon"),
+        HAS_STRAY_DUNGEON = registerBiomeTag("has_structure/stray_dungeon"),
+        HAS_SPIDER_DUNGEON = registerBiomeTag("has_structure/spider_dungeon"),
+        HAS_SILVERFISH_DUNGEON = registerBiomeTag("has_structure/silverfish_dungeon"),
+        HAS_LUIGITE_SHRINE = registerBiomeTag("has_structure/luigite_shrine")
+    ;
+
+    // endregion
+
     // region Registry
 
     private static TagKey<Block> registerBlockTag(String name) {
@@ -30,6 +45,10 @@ public class ModTags {
 
     private static TagKey<Item> registerItemTag(String name) {
         return TagKey.create(Registries.ITEM, LottaBlocks.id(name));
+    }
+
+    private static TagKey<Biome> registerBiomeTag(String name) {
+        return TagKey.create(Registries.BIOME, LottaBlocks.id(name));
     }
 
     // endregion

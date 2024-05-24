@@ -1,0 +1,34 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 366185123,
+    "separation": 15,
+    "spacing": 40
+  },
+  "structures": [
+    {
+      "structure": "lottablocks:zombie_dungeon",
+      "weight": 5
+    },
+    {
+      "structure": "lottablocks:skeleton_dungeon",
+      "weight": 5
+    },
+    {
+      "structure": "lottablocks:husk_dungeon",
+      "weight": 3
+    },
+    {
+      "structure": "lottablocks:stray_dungeon",
+      "weight": 3
+    },
+    {
+      "structure": "lottablocks:spider_dungeon",
+      "weight": 3
+    },
+    {
+      "structure": "lottablocks:silverfish_dungeon",
+      "weight": 1
+    }
+  ]
+}

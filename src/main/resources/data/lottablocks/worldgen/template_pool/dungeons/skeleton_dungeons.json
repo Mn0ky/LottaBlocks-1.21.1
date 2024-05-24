@@ -1,0 +1,14 @@
+{
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "lottablocks:dungeons/skeleton_dungeon",
+        "processors": "lottablocks:skeleton_dungeon_degradation",
+        "projection": "rigid"
+      },
+      "weight": 1
+    }
+  ]
+}
