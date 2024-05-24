@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 1835369759,
+    "separation": 1000,
+    "spacing": 1500
+  },
+  "structures": [
+    {
+      "structure": "lottablocks:piss_fountain",
+      "weight": 1
+    }
+  ]
+}

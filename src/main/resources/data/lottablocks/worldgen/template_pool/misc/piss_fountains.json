@@ -4,8 +4,8 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "lottablocks:luigite_shrine/luigite_shrine",
-        "processors": "lottablocks:luigite_shrine_degradation",
+        "location": "lottablocks:misc/piss_fountain",
+        "processors": "lottablocks:piss_fountain_degradation",
         "projection": "rigid"
       },
       "weight": 1

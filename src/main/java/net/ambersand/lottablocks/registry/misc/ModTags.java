@@ -32,7 +32,8 @@ public class ModTags {
         HAS_STRAY_DUNGEON = registerBiomeTag("has_structure/stray_dungeon"),
         HAS_SPIDER_DUNGEON = registerBiomeTag("has_structure/spider_dungeon"),
         HAS_SILVERFISH_DUNGEON = registerBiomeTag("has_structure/silverfish_dungeon"),
-        HAS_LUIGITE_SHRINE = registerBiomeTag("has_structure/luigite_shrine")
+        HAS_LUIGITE_SHRINE = registerBiomeTag("has_structure/luigite_shrine"),
+        HAS_PISS_FOUNTAIN = registerBiomeTag("has_structure/piss_fountain")
     ;
 
     // endregion
