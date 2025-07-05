@@ -1,9 +1,11 @@
 package net.ambersand.lottablocks.registry.blocks.custom_blocks;
 
+import org.jetbrains.annotations.NotNull;
+
 import com.mojang.serialization.MapCodec;
+
 import net.minecraft.world.level.block.MultifaceBlock;
 import net.minecraft.world.level.block.MultifaceSpreader;
-import org.jetbrains.annotations.NotNull;
 
 public class WallWebBlock extends MultifaceBlock {
 

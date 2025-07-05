@@ -1,10 +1,13 @@
 package net.ambersand.lottablocks.client;
 
+import net.ambersand.lottablocks.registry.LottaBlocksRegistry;
+import net.ambersand.lottablocks.registry.items.ModItems;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.minecraft.client.renderer.RenderType;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
+import net.minecraft.client.render.RenderLayer;
 import net.ambersand.lottablocks.registry.blocks.ModBlocks;
 
 @Environment(EnvType.CLIENT)
@@ -15,7 +18,7 @@ public class LottaBlocksClient implements ClientModInitializer {
 
         // Renders Blocks in List as Transparent (Without Translucency)
 
-        BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(),
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(),
             ModBlocks.AMETHYST_FLOODLIGHT,
             ModBlocks.GLOW_GLASS,
             ModBlocks.GLOW_GLASS_PANE,
@@ -27,12 +30,17 @@ public class LottaBlocksClient implements ClientModInitializer {
 
         // Renders Blocks in List as Transparent (With Translucency)
 
-        BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.translucent(),
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getTranslucent(),
             ModBlocks.REINFORCED_GLASS,
             ModBlocks.REINFORCED_GLASS_PANE,
             ModBlocks.SOUL_GLASS,
             ModBlocks.SOUL_GLASS_PANE,
             ModBlocks.CONGEALED_PISS
         );
+
+        // Luigite Item Packet (Lol)
+
+        ClientPlayNetworking.registerGlobalReceiver(LottaBlocksRegistry.LUIGITE_PACKET_ID,((client, handler, buf, responseSender) ->
+        client.gameRenderer.displayItemActivation(ModItems.LUIGITE_JUMPSCARE.getDefaultInstance())));
     }
 }

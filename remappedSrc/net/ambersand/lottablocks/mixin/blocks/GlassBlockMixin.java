@@ -1,21 +1,20 @@
 package net.ambersand.lottablocks.mixin.blocks;
 
+import net.ambersand.lottablocks.registry.misc.ModTags;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.TranslucentBlock;
+import net.minecraft.registry.tag.TagKey;
+import net.minecraft.util.math.Direction;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import net.ambersand.lottablocks.registry.misc.ModTags;
-import net.minecraft.core.Direction;
-import net.minecraft.tags.TagKey;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.HalfTransparentBlock;
-import net.minecraft.world.level.block.state.BlockState;
-
-@Mixin(HalfTransparentBlock.class)
+@Mixin(TranslucentBlock.class)
 public class GlassBlockMixin extends Block {
 
-    private GlassBlockMixin(Properties properties) {
+    private GlassBlockMixin(Settings properties) {
         super(properties);
     }
 
@@ -25,6 +24,6 @@ public class GlassBlockMixin extends Block {
 
         TagKey<Block> occludingGlass = ModTags.OCCLUDING_GLASS;
 
-        if (blockState.is(occludingGlass)) cir.setReturnValue(adjacentBlock.is(occludingGlass) || super.skipRendering(blockState, adjacentBlock, direction));
+        if (blockState.isIn(occludingGlass)) cir.setReturnValue(adjacentBlock.isIn(occludingGlass) || super.isSideInvisible(blockState, adjacentBlock, direction));
     }
 }

@@ -1,11 +1,11 @@
 package net.ambersand.lottablocks.registry.sounds;
 
 import net.ambersand.lottablocks.LottaBlocks;
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.sound.SoundEvent;
+import net.minecraft.util.Identifier;
 
 public class ModSoundEvents {
 
@@ -29,30 +29,28 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_PAPER_LANTERN_HIT = registerSoundEvent("block.paper_lantern.hit");
     public static final SoundEvent BLOCK_PAPER_LANTERN_FALL = registerSoundEvent("block.paper_lantern.fall");
 
-    public static final SoundEvent NOTE_BLOCK_WAHOO = registerSoundEvent("block.note_block.wahoo");
-
     // endregion
 
     // region Block Sound Groups
 
-    public static final SoundType AMETHYST_BRICKS = new SoundType(1F, 1F,
+    public static final BlockSoundGroup AMETHYST_BRICKS = new BlockSoundGroup(1F, 1F,
         ModSoundEvents.BLOCK_AMETHYST_BRICKS_BREAK, ModSoundEvents.BLOCK_AMETHYST_BRICKS_STEP, ModSoundEvents.BLOCK_AMETHYST_BRICKS_PLACE,
         ModSoundEvents.BLOCK_AMETHYST_BRICKS_HIT, ModSoundEvents.BLOCK_AMETHYST_BRICKS_FALL);
 
-    public static final SoundType LAVA_LAMP = new SoundType(1F, 1F,
+    public static final BlockSoundGroup LAVA_LAMP = new BlockSoundGroup(1F, 1F,
         ModSoundEvents.BLOCK_LAVA_LAMP_BREAK, ModSoundEvents.BLOCK_LAVA_LAMP_STEP, ModSoundEvents.BLOCK_LAVA_LAMP_PLACE,
         ModSoundEvents.BLOCK_LAVA_LAMP_HIT, ModSoundEvents.BLOCK_LAVA_LAMP_FALL);
 
-    public static final SoundType PAPER_LANTERN = new SoundType(1F, 1F,
+    public static final BlockSoundGroup PAPER_LANTERN = new BlockSoundGroup(1F, 1F,
         ModSoundEvents.BLOCK_PAPER_LANTERN_BREAK, ModSoundEvents.BLOCK_PAPER_LANTERN_STEP, ModSoundEvents.BLOCK_PAPER_LANTERN_PLACE,
         ModSoundEvents.BLOCK_PAPER_LANTERN_HIT, ModSoundEvents.BLOCK_PAPER_LANTERN_FALL);
 
     // endregion
 
     private static SoundEvent registerSoundEvent(String name) {
-        ResourceLocation resourceLocation = LottaBlocks.id(name);
-        SoundEvent soundEvent = SoundEvent.createVariableRangeEvent(resourceLocation);
-        return Registry.register(BuiltInRegistries.SOUND_EVENT, resourceLocation, soundEvent);
+        Identifier resourceLocation = LottaBlocks.id(name);
+        SoundEvent soundEvent = SoundEvent.of(resourceLocation);
+        return Registry.register(Registries.SOUND_EVENT, resourceLocation, soundEvent);
     }
 
     public static void registerSounds() {}

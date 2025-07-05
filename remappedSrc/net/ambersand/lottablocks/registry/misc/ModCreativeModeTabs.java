@@ -1,28 +1,28 @@
 package net.ambersand.lottablocks.registry.misc;
 
 import net.ambersand.lottablocks.LottaBlocks;
-import net.ambersand.lottablocks.registry.blocks.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.block.Blocks;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemGroups;
+import net.minecraft.item.ItemStack;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.text.Text;
+import net.ambersand.lottablocks.registry.blocks.ModBlocks;
 
 public class ModCreativeModeTabs {
 
-    private static final ResourceKey<CreativeModeTab> LOTTA_BLOCKS_CREATIVE_TAB = ResourceKey.create(Registries.CREATIVE_MODE_TAB, LottaBlocks.id(LottaBlocks.MOD_ID));
+    private static final RegistryKey<ItemGroup> LOTTA_BLOCKS_CREATIVE_TAB = RegistryKey.of(RegistryKeys.ITEM_GROUP, LottaBlocks.id(LottaBlocks.MOD_ID));
 
     @SuppressWarnings("all")
     public static void registerCreativeTabs() {
 
-        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, LOTTA_BLOCKS_CREATIVE_TAB, FabricItemGroup.builder()
-            .title(Component.translatable("itemGroup.lottablocks"))
+        Registry.register(Registries.ITEM_GROUP, LOTTA_BLOCKS_CREATIVE_TAB, FabricItemGroup.builder()
+            .displayName(Text.translatable("itemGroup.lottablocks"))
             .icon(() -> new ItemStack(ModBlocks.LANTERN_BLOCK))
             .build()
         );
@@ -31,7 +31,7 @@ public class ModCreativeModeTabs {
 
         ItemGroupEvents.modifyEntriesEvent(LOTTA_BLOCKS_CREATIVE_TAB).register(content -> {
 
-            content.accept(ModBlocks.BAMBOO_WEAVE);
+            content.add(ModBlocks.BAMBOO_WEAVE);
 
             content.addAfter(ModBlocks.BAMBOO_WEAVE, ModBlocks.BAMBOO_WEAVE_STAIRS, ModBlocks.BAMBOO_WEAVE_SLAB,
             ModBlocks.DIRT_BRICKS, ModBlocks.DIRT_BRICK_STAIRS, ModBlocks.DIRT_BRICK_SLAB, ModBlocks.DIRT_BRICK_WALL,
@@ -65,7 +65,7 @@ public class ModCreativeModeTabs {
 
         // region Building Blocks Tab
 
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register(entries -> {
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
 
             entries.addAfter(Blocks.BAMBOO_MOSAIC, ModBlocks.BAMBOO_WEAVE);
             entries.addAfter(Blocks.BAMBOO_MOSAIC_STAIRS, ModBlocks.BAMBOO_WEAVE_STAIRS);
@@ -122,7 +122,7 @@ public class ModCreativeModeTabs {
 
         // region Colored Blocks Tab
 
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COLORED_BLOCKS).register(entries -> {
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(entries -> {
             entries.addBefore(Blocks.WHITE_STAINED_GLASS, ModBlocks.GLOW_GLASS, ModBlocks.SOUL_GLASS, ModBlocks.REINFORCED_GLASS);
             entries.addBefore(Blocks.WHITE_STAINED_GLASS_PANE, ModBlocks.GLOW_GLASS_PANE, ModBlocks.SOUL_GLASS_PANE, ModBlocks.REINFORCED_GLASS_PANE);
         });
@@ -131,7 +131,7 @@ public class ModCreativeModeTabs {
 
         // region Natural Blocks Tab
 
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.NATURAL_BLOCKS).register(entries -> {
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
             entries.addAfter(Blocks.MOSS_CARPET, ModBlocks.WALL_MOSS);
             entries.addAfter(Blocks.JACK_O_LANTERN, ModBlocks.JACK_O_SOULS);
             entries.addAfter(Blocks.COBWEB, ModBlocks.WALL_WEB);
@@ -141,7 +141,7 @@ public class ModCreativeModeTabs {
 
         // region Functional Blocks Tab
 
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(entries -> {
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> {
             entries.addAfter(Blocks.SOUL_LANTERN, ModBlocks.LANTERN_BLOCK, ModBlocks.SOUL_LANTERN_BLOCK, ModBlocks.AMETHYST_FLOODLIGHT);
             entries.addAfter(Blocks.REDSTONE_LAMP, ModBlocks.LAVA_LAMP);
             entries.addAfter(Blocks.SHROOMLIGHT, ModBlocks.HONEYLAMP);

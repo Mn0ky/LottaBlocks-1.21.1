@@ -1,6 +1,9 @@
 package net.ambersand.lottablocks.registry.blocks.custom_blocks;
 
+import org.jetbrains.annotations.NotNull;
+
 import net.ambersand.lottablocks.LottaBlocks;
+import net.ambersand.lottablocks.registry.sounds.ModSoundEvents;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.Entity;
@@ -14,8 +17,6 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.ambersand.lottablocks.registry.sounds.ModSoundEvents;
-import org.jetbrains.annotations.NotNull;
 
 @SuppressWarnings("deprecation")
 public class PaperLanternBlock extends Block {

@@ -1,5 +1,7 @@
 package net.ambersand.lottablocks.registry.blocks.custom_blocks;
 
+import org.jetbrains.annotations.NotNull;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.entity.projectile.Projectile;
@@ -21,7 +23,6 @@ import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import org.jetbrains.annotations.NotNull;
 
 @SuppressWarnings("deprecation")
 public class AmethystFloodlightBlock extends Block implements SimpleWaterloggedBlock, AmethystChimeInterface {
